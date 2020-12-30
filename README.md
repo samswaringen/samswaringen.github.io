@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-  <head>
+    <title>Sam Swaringen's Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
-    <h1> Sam Swaringen's Homepage </h1>
-    <a href="https://pkimgcdn.peekyou.com/e2b2f5a0189fc47cefd1006827a23241.jpeg"></a>
+    <main>
+    <h1 id="websitetitle">Sam Swaringen's Homepage</h1>
+    <p class="welcome"> Welcome to my Website! It is currently a work in progress and I will be updating regularly</p>
+    <p class="stuff">I'm going to put some interesting stuff about me here.</p>
+    <p class="links"> Maybe some links to my linkdn or my resume here</p>
+    </main>
+   <footer>
+    <p>Made by Sam Swaringen 2020</p>
+   </footer>
   </body>
-  <foot>
-    Made by Sam Swaringen 2020
-  </foot>
- <html>
+</html>
+
