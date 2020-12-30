@@ -1,0 +1,40 @@
+body {
+    height: 100em;
+}
+
+html {
+    background-image: url(mefishing.jpg);
+    background-size: cover;
+}
+h1{
+    margin: 25px;
+    padding: 30px;
+    background-image: url(banner.jpg);
+    background-size: cover;
+    border: gold solid 6px;
+}
+#websitetitle {
+    color:gold;
+    font-size: 4em;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+p.welcome {
+    text-align: right;
+    font-size: 200%;
+    margin-right: 40px;
+    margin-left: 800px;
+}
+p.stuff {
+    text-align: right;
+    font-size: 150%;
+    margin-right: 40px;
+    margin-left: 800px;
+}
+p.links {
+    text-align: right;
+    font-size: 150%;
+    margin-right: 40px;
+    margin-left: 800px;
+}
