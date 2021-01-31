@@ -2,17 +2,19 @@
 
 <head>
     <title>Simulation - Scheduler</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />  
-  
+    <link rel="stylesheet" type="text/css" href="style.css" />    
 </head>
+<div id = 'scoreBoard'>
+    <ul>
+      <li><img src='images/PacMan1.png' width = '80' style='position: relative;'></img></li>
+      <li><div id = 'pointsLeft'>Points Left:<div id ='points'></div></div></li>
+      <li><div id = 'timeRefresh'></div></li>
+      <li><div id = 'scoreBox'>Score:<div id = 'score'></div> </div></li>
+   </ul>
+   
+   <img src='images/Ghost.png' width ='80'></img>
+</div>
 <div id = 'gameArea'>
-    <div id = 'scoreBoard'>
-         <ul>
-           <li><div id = 'pointsLeft'>Points Left: </div></li>
-           <li><div id = 'score'>Score: </div></li>
-           <li><div id = 'timeRefresh'>Time until Refresh: </div></li>
-        </ul>
-    </div>
     <div id = 'gameOver'></div>
     <img id="PacMan" src="images/PacMan1.png" width='50' style="position:absolute"> </img>
     <img id="Ghost" src="images/Ghost.png" width='50' style="position:absolute; left:1000px; top:700px"> </img>

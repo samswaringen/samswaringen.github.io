@@ -1,43 +1,76 @@
 #scoreBoard {
     display: table;
-    margin: 0 auto;
+    margin: auto;
 }
 ul {
     list-style-type: none;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
-    padding: 10px;
     overflow: hidden;
-    background-color: #333333;
   }
-  
 li {
-    float: left;
-    display: inline;
+    display: inline-block;
   }
-  
 li div {
     display: block;
     color: white;
-    text-align: center;
-    padding: 25px;
     text-decoration: none;
-    border: 2px solid white;
+    border: 3px solid white;
+    background-color: black;
   }
+#pointsLeft {
+  font-size: 10px;
+  font-family: monospace;
+  height: 80px;
+  width: 80px;
+  border-radius: 10%;
+  text-align: center;
+  margin-left: -40px;
+}
+#points {
+  font-size: 40px ;
+  border-radius: 10%;
+  text-align: center;
+}
+#timeRefresh {
+  font-family: monospace;
+  font-size: 60px;
+  border-radius: 10%;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+}
+#scoreBox {
+  font-size: 10px;
+  font-family: monospace;
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  text-align: center;
+}
+#score {
+  font-size: 40px;
+  border-radius: 10%;
+  text-align: center;
+}
 #gameArea {
-    display: flex;                  
+    display: flex;  
+    margin-top: 120px;          
 }
 .ball { 
     width: 10px;
     height: 10px;
-    border-radius: 50%; /* Turns a square into a circle   */
-    background-color: #ff5722; /* Sets color to Orange           */
+    border-radius: 50%; 
+    background-color: #ff5722; 
     position: absolute;
   }
-  .box {
+.box {
     position: absolute;
+    z-index: 2;
   }
-  img {
-      z-index: 5;
+img {
+      z-index: 3;
   }
 

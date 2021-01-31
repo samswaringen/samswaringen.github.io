@@ -1,22 +1,24 @@
 let pos = 0;
-let posY = 0;
+let posY = 120;
 let pageWidth = window.innerWidth;
 let pageHeight = window.innerHeight;
 const upBalls = [];
 const downBalls = [];
 const colors = [];
+const cirPosX = [];
+const cirPosY = [];
 let size = 0;
-var ballPositions = [];
 let ghostX = pageWidth - 50;
 let ghostY = pageHeight - 50;
 var ghostVelX = getRandom(10);
 var ghostVelY = getRandom(10);
-const cirPosX = [];
-const cirPosY = [];
 let img = document.getElementById('PacMan');
 let imgWidth = img.width;
 let gameIsOver = 0;
 let pointCounter = 0;
+let timeCounter = 0;
+var resetTime = 30000;
+let countdown = resetTime;
 
 const pacArray = [
   ['./images/PacMan1.png', './images/PacMan2.png'],
@@ -26,7 +28,6 @@ const pacArray = [
 ];
 var direction = 0;
 var directionY = 0;
-
 var intervalRight;
 var intervalUp;
 var intervalLeft;
@@ -50,7 +51,19 @@ function checkWalls() {
     ghostY = 0;
   }
 }
-
+function refreshTimer(){
+  if(countdown === 0){
+    countdown = resetTime;
+  }else{
+    timeCounter = (countdown-1000)/1000;
+    countdown -= 1000
+    if(countdown < 6000){
+      document.getElementById('timeRefresh').style.color = 'red';
+    }
+    document.getElementById('timeRefresh').innerHTML = `${timeCounter}`
+  }
+  setTimeout(refreshTimer, 1000);
+}
 function ghostMove(){{
   let ghost = document.getElementById('Ghost');
   checkWalls();
@@ -81,8 +94,11 @@ function ghostCheck(){
   let x2 = Math.abs(pacPosX - ghostPosX)**2;
   let y2 = Math.abs(pacPosY - ghostPosY)**2;
   let distanceBtwn = Math.sqrt(x2 + y2);
-  if (distanceBtwn < imgWidth){
-    alert('Game Over! Start again?');
+  if (distanceBtwn < (imgWidth/1.5)){
+    alert(`
+     Game Over!
+     You got ${pointCounter} Points!
+     Start again?`);
     gameOver();
   } 
 }
@@ -98,13 +114,13 @@ function upCircleCheck(){
     let distanceBtwn = Math.sqrt(x2 + y2);
     if (distanceBtwn < (imgWidth/2)){
       pointCounter += 1;
-      imgWidth += 1;
+      imgWidth += 2;
       document.getElementById('PacMan').style.width = `${imgWidth}`;
-      document.getElementById('score').innerHTML = `Score: ${pointCounter}`;
+      document.getElementById('score').innerHTML = `${pointCounter}`;
       upBalls.splice(i,1);
       i -= 1;
       upLength -= 1;
-      document.getElementById('pointsLeft').innerHTML = `Points Left: ${upBalls.length + downBalls.length}`; 
+      document.getElementById('points').innerHTML = `${upBalls.length + downBalls.length}`; 
     }
   }
 }
@@ -120,13 +136,13 @@ function downCircleCheck(){
     let distanceBtwn = Math.sqrt(x2 + y2);
     if (distanceBtwn < (imgWidth/2)){
       pointCounter += 1;
-      imgWidth -= 5;
+      imgWidth -= 7;
       document.getElementById('PacMan').style.width = `${imgWidth}`;
-      document.getElementById('score').innerHTML = `Score: ${pointCounter}`;
+      document.getElementById('score').innerHTML = `${pointCounter}`;
       downBalls.splice(i,1);
       i -= 1;
       downLength -= 1;
-      document.getElementById('pointsLeft').innerHTML = `Points Left: ${downBalls.length + upBalls.length}`; 
+      document.getElementById('points').innerHTML = `${downBalls.length + upBalls.length}`; 
     }
   }
 }
@@ -137,20 +153,23 @@ function displayGO(){
  }
 function gameOver(){
   document.location.reload();
+  pos = 0;
+  posy = 120;
+  imgWidth = 50;
   ghostX = 1000;
   ghostY = 700;
   startOver(); 
 }
  function startOver(){
-   document.getElementById('gameArea').innerHTML = `<div id = 'scoreBoard'>
-  <ul>
-  <li><div id = 'pointsLeft'>Points Left: ${upBalls.length} </div></li>
-  <li><div id = 'score'>Score: ${pointCounter} </div></li>
-  <li><div id = 'timeRefresh'>Time until Refresh: </div></li>
-  </ul>
-</div>
+   document.getElementById('scoreBoard').innerHTML = `
+   <ul>
+   <li><div id = 'pointsLeft'>Points Left:<div id = 'points'>${upBalls.length + downBalls.length}</div></div></li>
+   <li><div id = 'timeRefresh'>${timeCounter}</div></li>
+   <li><div id = 'scoreBox'>Score:<div id = 'score'>${pointCounter}</div></div></li>
+   </ul>`
+   document.getElementById('gameArea').innerHTML = `
 <div id = 'gameOver'></div>
-<img id="PacMan" src= "images/PacMan1.png" width='${imgWidth}' style="position:absolute" </img>
+<img id="PacMan" src= "images/PacMan1.png" width='${imgWidth}' style="position:absolute; left:${pos}; top:${posY}" </img>
 <img id="Ghost" src="images/Ghost.png" width='50' style="position:absolute; left:1000px; top:700px"> </img>
 <script src="./pacman.js"></script> `;
 ghostMove();
@@ -179,7 +198,7 @@ function RunRight() {
     downCircleCheck();
     pos += 20;
     img.style.left = pos + 'px';
-    makeBox(pos - (imgWidth/2) , posY, imgWidth);
+    makeBox(pos - (imgWidth/4), posY, imgWidth, imgWidth/1.5);
   }
 }
 function RunLeft() {
@@ -197,7 +216,7 @@ function RunLeft() {
     downCircleCheck();
     pos -= 20;
     img.style.left = pos + 'px';
-    makeBox(pos + (imgWidth/2), posY, imgWidth);
+    makeBox(pos + (imgWidth/2), posY, imgWidth, imgWidth/1.5);
   }
 }
 
@@ -216,7 +235,7 @@ function JumpUp() {
     downCircleCheck();
     posY -= 20;
     img.style.top = posY + 'px';
-    makeBox(pos, posY + (imgWidth/2), imgWidth);
+    makeBox(pos, posY + (imgWidth/2), imgWidth/1.5, imgWidth);
   }
 }
 function JumpDown() {
@@ -234,7 +253,7 @@ function JumpDown() {
     downCircleCheck();
     posY += 20;
     img.style.top = posY + 'px';
-    makeBox(pos, posY - (imgWidth/2) , imgWidth);
+    makeBox(pos, posY - (imgWidth/4) , imgWidth/1.5, imgWidth);
   }
 }
 function allClear(){
@@ -288,7 +307,7 @@ function checkPageBoundsL(direction, imgWidth, pos, pageWidth) {
   return direction;
 }
 function checkPageBoundsY(directionY, imgWidth, posY, pageHeight) {
-  if (posY + imgWidth >= pageHeight){
+  if (posY + imgWidth > pageHeight){
    directionY = 0;
 
   }else if(posY <= 0) {
@@ -314,11 +333,12 @@ function makeBall(xcoord, ycoord, color) {
   ball.style.left = xcoord;
   document.getElementById('gameArea').appendChild(ball);
 }
-function makeBox(xcoord, ycoord, size){
+function makeBox(xcoord, ycoord, height, width){
   box = document.createElement('div')
   box.style.backgroundColor = 'white';
   box.className = `box`;
-  box.style.height = box.style.width = size;
+  box.style.height = height
+  box.style.width = width;
   box.style.top = ycoord;
   box.style.left = xcoord;
   document.getElementById('gameArea').appendChild(box);
@@ -342,12 +362,13 @@ function factory(total) {
   }
   for(let i = 0; i < total / 10; i++){
     size = 20;
-    downBall =makeBall(getRandom(pageWidth -100) + 25, getRandom(pageHeight -100) + 25, 'black');
+    makeBall(cirPosX[getRandom(100)], cirPosY[getRandom(100)], 'black');
     let newBall = []; 
     newBall.push(parseInt(ball.style.left));
     newBall.push(parseInt(ball.style.top));
     downBalls.push(newBall);
   }
+  document.getElementById('points').innerHTML = `${downBalls.length + upBalls.length}`; 
 }
 
 function setPoints(){
@@ -359,14 +380,14 @@ function setPoints(){
   }
   ghostVelX += getRandom(7);
   ghostVelY += getRandom(7);
- document.getElementById('gameArea').innerHTML = `<div id = 'scoreBoard'>
-    <ul>
-    <li><div id = 'pointsLeft'>Points Left: ${upBalls.length} </div></li>
-    <li><div id = 'score'>Score: ${pointCounter} </div></li>
-    <li><div id = 'timeRefresh'>Time until Refresh: </div></li>
-    </ul>
-  </div>
-  <div id = 'gameOver'></div>
+  countdown = resetTime;
+  document.getElementById('scoreBoard').innerHTML = `
+  <ul>
+  <li><div id = 'pointsLeft'>Points Left:<div id = 'points'>${upBalls.length + downBalls.length}</div></div></li>
+  <li><div id = 'timeRefresh'>${timeCounter}</div></li>
+  <li><div id = 'scoreBox'>Score:<div id = 'score'>${pointCounter}</div></div></li>
+  </ul>`
+ document.getElementById('gameArea').innerHTML = `<div id = 'gameOver'></div>
   <img id="PacMan" src= "images/PacMan1.png" width='${imgWidth}' style="position:absolute; left:${pos}; top:${posY}"> </img>
   <img id="Ghost" src="images/Ghost.png" width='50' style="position:absolute; left:${ghostX}; top:${ghostY}"> </img>
   <script src="./pacman.js"></script> `;
@@ -374,11 +395,13 @@ function setPoints(){
   factory(getRandom(100));
 }
 function game(){
+  refreshTimer();
   ghostMove();
-  setInterval(setPoints, 30000);
+  setInterval(setPoints, resetTime);
   }
 game();
 startOver();
+
 
 
 
