@@ -1,7 +1,7 @@
 let pos = 0;
 let posY = 120;
-let pageWidth = window.innerWidth -10;
-let pageHeight = window.innerHeight-10;
+var pageWidth = window.innerWidth -10;
+var pageHeight = window.innerHeight-10;
 const upBalls = [];
 const downBalls = [];
 const colors = [];
@@ -13,7 +13,7 @@ let ghostY = pageHeight - 50;
 var ghostVelX = getRandom(10);
 var ghostVelY = getRandom(10);
 let img = document.getElementById('PacMan');
-let imgWidth = img.width;
+var imgWidth = img.width;
 let gameIsOver = 0;
 let pointCounter = 0;
 let timeCounter = 0;
@@ -94,7 +94,7 @@ function ghostCheck(){
   let x2 = Math.abs(pacPosX - ghostPosX)**2;
   let y2 = Math.abs(pacPosY - ghostPosY)**2;
   let distanceBtwn = Math.sqrt(x2 + y2);
-  if (distanceBtwn < (imgWidth/1.5)){
+  if (distanceBtwn < (imgWidth/2)){
     alert(`
      Game Over!
      You got ${pointCounter} Points!
@@ -289,7 +289,7 @@ function moveDirection(evnt){
   document.addEventListener('keydown', moveDirection);
  
 function checkPageBounds(direction, imgWidth, pos, pageWidth) {
-  if (pos + imgWidth >= pageWidth){
+  if (pos + imgWidth >= pageWidth-10){
    direction = 1;
 
   }else if(pos <= 10) {
@@ -298,7 +298,7 @@ function checkPageBounds(direction, imgWidth, pos, pageWidth) {
   return direction;
 }
 function checkPageBoundsL(direction, imgWidth, pos, pageWidth) {
-  if (pos + imgWidth >= pageWidth){
+  if (pos + imgWidth >= pageWidth-10){
    direction = 0;
 
   }else if(pos <= 10) {
@@ -307,10 +307,10 @@ function checkPageBoundsL(direction, imgWidth, pos, pageWidth) {
   return direction;
 }
 function checkPageBoundsY(directionY, imgWidth, posY, pageHeight) {
-  if (posY + imgWidth > pageHeight){
+  if (posY + imgWidth >= pageHeight){
    directionY = 0;
 
-  }else if(posY <= 120) {
+  }else if(posY <+ 105) {
     directionY = 1;
   }
   return directionY;
@@ -319,7 +319,7 @@ function checkPageBoundsYD(directionY, imgWidth, posY, pageHeight) {
   if (posY + imgWidth >= pageHeight){
    directionY = 1;
 
-  }else if(posY <= 120) {
+  }else if(posY <= 105) {
     directionY = 0;
   }
   return directionY;
