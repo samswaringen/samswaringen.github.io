@@ -2,6 +2,7 @@ function makeBall(xcoord, ycoord, color, velx = 0, vely = 0, fixed = 0) {
     ball = document.createElement("div");
     ball.style.backgroundColor = color;
     ball.className = "ball";
+    size = getRandom(20);
     ball.style.height = ball.style.width = size;
     ball.style.top = ycoord;
     ball.style.left = xcoord;

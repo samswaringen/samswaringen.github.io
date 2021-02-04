@@ -3,7 +3,7 @@
   <script src="ball.js"></script>
   <script>
     // Everything below was provided to me
-    const size = 20; // size of ball
+    let size = 20; // size of ball
     const x = []; // position
     const y = [];
     const stepsize = 15;
@@ -27,8 +27,8 @@
       if (y[i] + size > imgHeight) {
         velocity_y[i] = -velocity_y[i];
         y[i] = imgHeight - size;
-      } else if (y[i] < 0) {
-        y[i] = 0;
+      } else if (y[i] < 10) {
+        y[i] = 10;
         velocity_y[i] = -velocity_y[i];
       }
     }
