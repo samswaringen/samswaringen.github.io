@@ -1,7 +1,7 @@
 let pos = 0;
 let posY = 120;
-let pageWidth = window.innerWidth;
-let pageHeight = window.innerHeight;
+let pageWidth = window.innerWidth -10;
+let pageHeight = window.innerHeight-10;
 const upBalls = [];
 const downBalls = [];
 const colors = [];
@@ -292,7 +292,7 @@ function checkPageBounds(direction, imgWidth, pos, pageWidth) {
   if (pos + imgWidth >= pageWidth){
    direction = 1;
 
-  }else if(pos <= 0) {
+  }else if(pos <= 10) {
     direction = 0;
   }
   return direction;
@@ -301,7 +301,7 @@ function checkPageBoundsL(direction, imgWidth, pos, pageWidth) {
   if (pos + imgWidth >= pageWidth){
    direction = 0;
 
-  }else if(pos <= 0) {
+  }else if(pos <= 10) {
     direction = 1;
   }
   return direction;
@@ -310,7 +310,7 @@ function checkPageBoundsY(directionY, imgWidth, posY, pageHeight) {
   if (posY + imgWidth > pageHeight){
    directionY = 0;
 
-  }else if(posY <= 0) {
+  }else if(posY <= 120) {
     directionY = 1;
   }
   return directionY;
@@ -319,7 +319,7 @@ function checkPageBoundsYD(directionY, imgWidth, posY, pageHeight) {
   if (posY + imgWidth >= pageHeight){
    directionY = 1;
 
-  }else if(posY <= 0) {
+  }else if(posY <= 120) {
     directionY = 0;
   }
   return directionY;
