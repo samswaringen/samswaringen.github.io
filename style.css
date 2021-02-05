@@ -1,50 +1,257 @@
-body {
-    height: 100em;
+@font-face {
+    font-family: '1942';
+    src: url('1942.ttf');
 }
-
-html {
-    background-image: url(mefishing.jpg);
-    background-size: cover;
-}
-h1{
-    margin: 25px;
-    padding: 30px;
-    background-image: url(banner.jpg);
-    background-size: cover;
-    border: gold solid 6px;
-}
-#websitetitle {
-    color:gold;
-    font-size: 4em;
-    font-style: oblique;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-p.welcome {
-    text-align: right;
-    font-family: fantasy;
-    font-size: 200%;
-    margin-right: 40px;
-    margin-left: 800px;
-}
-p.stuff {
-    text-align: right;
-    font-family: cursive;
-    font-size: 150%;
-    margin-right: 40px;
-    margin-left: 800px;
-}
-p.links {
-    text-align: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 150%;
-    margin-right: 40px;
-    margin-left: 800px;
-}
-footer{
+#background {
     position: absolute;
-    bottom: -50em;
-    color:white;
-    margin-left: 90px;
-
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 100%;
+    height: 100%;
+    background-image: url('filecabinets.jpg');
+    opacity: 0.7;
+}
+#header {
+    position: absolute;
+    width: 50%;
+    height: 50;
+    border-bottom: 3px solid white;
+    font-family: '1942';
+    font-size: 40px;
+    text-align: left;
+    color: whitesmoke;
+    text-shadow: 2px -2px 2px black, 0 0 20px gray, 0 0 5px grey;
+    font-weight: bolder;
+}
+#folders {
+    position: absolute;
+    width: 900;
+    height: 725;
+    overflow: hidden;
+}
+#file0 {
+    position: absolute;
+    top: 25;
+    z-index: 0;
+}
+#file1 {
+    position: absolute;
+    top: 50;
+    z-index: 1;
+}
+#file2 {
+    position: absolute;
+    top: 75;
+    z-index: 4;
+}
+#file3 {
+    position: absolute;
+    top: 100;
+    z-index: 6;
+}
+#file4 {
+    position: absolute;
+    top: 125;
+    z-index: 8;
+}
+#file5 {
+    position: absolute;
+    top: 150;
+    z-index: 10;
+}
+#file6 {
+    position: absolute;
+    top: 175;
+    z-index: 12;
+}
+#file7 {
+    position: absolute;
+    top: 200;
+    z-index: 14;
+}
+#file8 {
+    position: absolute;
+    top: 225;
+    z-index: 16;
+}
+#file9 {
+    position: absolute;
+    top: 250;
+    z-index: 18;
+}
+#link0 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    height: 18;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 3;
+    font-family:'Modak';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+    
+}
+#link1 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 5;
+    font-family:'Slackey';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link2 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 7;
+    font-family:'Monofett';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link3 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 9;
+    font-family: 'Knewave';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link4 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 11;
+    font-family: 'Fascinate';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link5 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 13;
+    font-family: 'Miltonian';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link6 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 15;
+    font-family: 'Butcherman';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link7 {
+    position: absolute;
+    border: 2px solid black;
+    border-bottom: none;
+    left: 580;
+    width: 200;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 17;
+    font-family: 'Flavors';
+    background-image: url(paper.jpg);
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link8 {
+    position: absolute;
+    border: 5px dotted white;
+    border-bottom: none;
+    left: 580;
+    width: 194;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    z-index: 19;
+    background-color:black;
+    font: 12px 'Press Start 2P';
+    color: white;
+    text-shadow: 0 0 2px white, 0 0 5px white, 0 0 25px white;
+    line-height: 29px;
+}
+#link9 {
+    position: absolute;
+    border: 2px solid black;
+    left: 580;
+    width: 200;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 17px;
+    background-image: url(paint.png);
+    font: bolder  25px 'Barrio';
+    color: white;
+    text-shadow: 0 0 2px black, 0 0 5px black, 0 0 20px black;
+    z-index: 20;
+}
+#link10 {
+    position: absolute;
+    left: 580;
+    width: 200;
+    border-radius: 5px;
+    text-align: center;
+    background-color: none;
+    z-index: 20;
+    opacity: 0;
+}
+#iframeDiv {
+    position: absolute;
+    left: 860;
+    top: 18;
+    background-image: url(wallpaper.jpg);
+    background-size: contain;
+    padding: 15px;
+}
+#newFrame {
+    position: relative;
+    background-color: white;
+}
+iframe {
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 2px whitesmoke;
+}
+#pacPic {
+    position: relative;
+    margin-right: 4px;
+}
+#ghostPic {
+    background-color: none;
 }
