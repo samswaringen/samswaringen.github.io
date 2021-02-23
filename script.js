@@ -28,6 +28,8 @@ function handleFile(event){
         namedDiv.style.borderBottom = 'none';
         namedDiv.style.borderRadius = '5px 5px 0px 0px';
         namedDiv.style.lineHeight = '29px';
+        namedDiv.style.transition = '.1s .1s';
+        document.getElementById(`file${number}`).style.transition = '.1s .1s';
         
     }
     fixLastBorder = () => {
