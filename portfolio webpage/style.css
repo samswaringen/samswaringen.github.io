@@ -1,0 +1,212 @@
+@font-face {
+    font-family: '1942';
+    src: url('1942.ttf');
+}
+@keyframes rotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+  @-ms-viewport {
+    width: device-width ;
+  }
+#background {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 100%;
+    height: 100%;
+    background-image: url('blackandwhite.png');
+}
+#header {
+    position: absolute;
+    width: 50%;
+    height: 50;
+    border-bottom: 3px solid white;
+    font-family: '1942';
+    font-size: 40px;
+    text-align: left;
+    color: whitesmoke;
+    text-shadow: 2px -2px 2px black, 0 0 20px gray, 0 0 5px grey;
+    font-weight: bolder;
+    background: rgb(0,0,0,.8)
+}
+#folders {
+    position: absolute;
+    width: 900;
+    height: 725;
+    overflow: hidden;
+}
+.files {
+    position: absolute;
+    transition: top .1s;
+
+}
+#file0 {
+    top: 25;
+    z-index: 0;
+
+
+}
+#file1 {
+    top: 50;
+    z-index: 1;
+
+}
+#file2 {
+    top: 75;
+    z-index: 4;
+
+}
+#file3 {
+    top: 100;
+    z-index: 6;
+
+}
+#file4 {
+    top: 125;
+    z-index: 8;
+
+}
+#file5 {
+    top: 150;
+    z-index: 10;
+
+}
+#file6 {
+    top: 175;
+    z-index: 12;
+
+}
+#file7 {
+    top: 200;
+    z-index: 14;
+
+}
+#file8 {
+    top: 225;
+    z-index: 16;
+
+}
+#file9 {
+    top: 250;
+    z-index: 18;
+    transition: top .1s .1s;
+
+}
+.links {
+    position: absolute;
+    left: 580;
+    width: 200;
+    text-align: center;
+    border: 2px solid black;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-image: url(paper.jpg);
+    transition: .1s;
+    color: red;
+    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+}
+#link0 {
+    height: 18;
+    z-index: 3;
+    font-family:'Modak';
+    color: black;
+    text-shadow: 2px 2px 5px rgb(172, 171, 171), 0 0 5px white, 0 0 25px white;    
+}
+#link1 {
+    z-index: 5;
+    font-family:'Slackey';
+}
+#link2 {
+    z-index: 7;
+    font-family:'Monofett';
+}
+#link3 {
+    z-index: 9;
+    font-family: 'Knewave';
+}
+#link4 {
+    z-index: 11;
+    font-family: 'Fascinate';
+}
+#link5 {
+    z-index: 13;
+    font-family: 'Miltonian';
+}
+#link6 {
+    z-index: 15;
+    font-family: 'Butcherman';
+}
+#link7 {
+    z-index: 17;
+    font-family: 'Flavors';
+}
+#link8 {
+    border: 5px dotted white;
+    width: 194;
+    z-index: 19;
+    background-color: black;
+    background-image: none;
+    font: 12px 'Press Start 2P';
+    color: white;
+    text-shadow: 0 0 2px white, 0 0 5px white, 0 0 25px white;
+    line-height: 29px;
+}
+#link9 {
+    border-radius: 5px;
+    padding-top: 17px;
+    background-image: url(paint.png);
+    font: bolder  25px 'Barrio';
+    color: white;
+    text-shadow: 0 0 2px black, 0 0 5px black, 0 0 20px black;
+    z-index: 20;
+    transition: .1s .1s;
+}
+#link10 {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: none;
+    z-index: 20;
+    opacity: 0;
+    transition: .1s .1s;
+}
+#iframeDiv {
+    position: absolute;
+    left: 875;
+    top: 18;
+    background: center / contain repeat url(wallpaper.jpg);
+    animation: none;
+    height: 713px;
+    width: 580px;
+    border-radius: 5px;
+}
+#inner-Frame {
+    position: absolute;
+    left: 890;
+    top: 33;
+    background: none;
+    animation: none;
+}
+#newFrame {
+    position: relative;
+    background: white;
+}
+iframe {
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 2px whitesmoke;
+}
+#pacPic {
+    position: relative;
+    margin-right: 4px;
+}
+#ghostPic {
+    background-color: none;
+}
