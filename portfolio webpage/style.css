@@ -46,12 +46,12 @@
 }
 .files {
     position: absolute;
-    transition: top .1s;
-
+    transition: top 1s;
+    height: 650px;
+    top: 650px;
 }
 #file0 {
     top: 25;
-    z-index: 0;
 
 
 }
@@ -62,55 +62,54 @@
 }
 #file2 {
     top: 75;
-    z-index: 4;
+    z-index: 2;
 
 }
 #file3 {
     top: 100;
-    z-index: 6;
+    z-index: 3;
 
 }
 #file4 {
     top: 125;
-    z-index: 8;
+    z-index: 4;
 
 }
 #file5 {
     top: 150;
-    z-index: 10;
+    z-index: 5;
 
 }
 #file6 {
     top: 175;
-    z-index: 12;
+    z-index: 6;
 
 }
 #file7 {
     top: 200;
-    z-index: 14;
+    z-index: 7;
 
 }
 #file8 {
     top: 225;
-    z-index: 16;
+    z-index: 8;
 
 }
 #file9 {
     top: 250;
-    z-index: 18;
-    transition: top .1s .1s;
+    z-index: 9;
 
 }
 .links {
     position: absolute;
-    left: 580;
-    width: 200;
+    left: 80;
+    width: 182;
     text-align: center;
     border: 2px solid black;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
     background-image: url(paper.jpg);
-    transition: .1s;
+    transition: 1s;
     color: red;
     text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
 }
@@ -122,40 +121,40 @@
     text-shadow: 2px 2px 5px rgb(172, 171, 171), 0 0 5px white, 0 0 25px white;    
 }
 #link1 {
-    z-index: 5;
+    z-index: 4;
     font-family:'Slackey';
 }
 #link2 {
-    z-index: 7;
+    z-index: 5;
     font-family:'Monofett';
 }
 #link3 {
-    z-index: 9;
+    z-index: 6;
     font-family: 'Knewave';
 }
 #link4 {
-    z-index: 11;
+    z-index: 7;
     font-family: 'Fascinate';
 }
 #link5 {
-    z-index: 13;
+    z-index: 8;
     font-family: 'Miltonian';
 }
 #link6 {
-    z-index: 15;
+    z-index: 9;
     font-family: 'Butcherman';
 }
 #link7 {
-    z-index: 17;
+    z-index: 10;
     font-family: 'Flavors';
 }
 #link8 {
     border: 5px dotted white;
-    width: 194;
-    z-index: 19;
+    width: 176;
+    z-index: 11;
     background-color: black;
     background-image: none;
-    font: 12px 'Press Start 2P';
+    font: 10px 'Press Start 2P';
     color: white;
     text-shadow: 0 0 2px white, 0 0 5px white, 0 0 25px white;
     line-height: 29px;
@@ -164,19 +163,18 @@
     border-radius: 5px;
     padding-top: 17px;
     background-image: url(paint.png);
-    font: bolder  25px 'Barrio';
+    font: bolder  22px 'Barrio';
     color: white;
     text-shadow: 0 0 2px black, 0 0 5px black, 0 0 20px black;
-    z-index: 20;
-    transition: .1s .1s;
+    z-index: 12;
 }
 #link10 {
     border-radius: 5px;
     border: 2px solid black;
     background-color: none;
-    z-index: 20;
+    z-index: 12;
     opacity: 0;
-    transition: .1s .1s;
+    transition: .9s .1s;
 }
 #iframeDiv {
     position: absolute;

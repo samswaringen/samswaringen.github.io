@@ -24,12 +24,13 @@ function handleFile(event){
     let top = parseInt(namedDiv.style.top);
     let expandTop = parseInt(lastLink.style.top);
     let website = document.getElementById(`website${number}`);
+
     fixNamedBorder = () => {
         namedDiv.style.borderBottom = 'none';
         namedDiv.style.borderRadius = '5px 5px 0px 0px';
         namedDiv.style.lineHeight = '29px';
-        namedDiv.style.transition = '.1s .1s';
-        document.getElementById(`file${number}`).style.transition = '.1s .1s';
+        //namedDiv.style.transition = '.9s .1s';
+       // document.getElementById(`file${number}`).style.transition = '.9s .1s';
         
     }
     fixLastBorder = () => {
@@ -45,15 +46,16 @@ function handleFile(event){
     if(event.type == 'mouseover'){
         if(number === 8){
             fixIFrame();
-            height += 41 ;
+            height += 25;
             namedDiv.style.borderBottom = '5px dotted white';
             namedDiv.style.borderRadius = '5px 5px 5px 5px';
-            namedDiv.style.lineHeight = '68px';
+            namedDiv.style.lineHeight = '58px';
             iframeDiv.style.background = 'linear-gradient(#14ffe9, #ffeb3b, #ff00e0)';
             iframeDiv.style.animation = 'rotate 1.5s linear infinite'
         } if(number === 9){
             fixIFrame();
             fixLastBorder();
+            document.getElementById('file9').style.zIndex = 12;
             expandTop -= 50;
             newFrame.style.height = '585px';
             newFrame.style.width = '457px';
@@ -65,6 +67,7 @@ function handleFile(event){
             iframeDiv.style.animation = 'none';
         }if(number === 10){
             fixLastBorder();
+            document.getElementById('file9').style.zIndex = 12;
             height += 50;
             expandTop -= 50;
             newFrame.style.height = '585px';
@@ -77,8 +80,8 @@ function handleFile(event){
             iframeDiv.style.animation = 'none';
         }else if(number<8){
             fixIFrame();
-             height += 41;
-             namedDiv.style.fontSize = '25px'
+             height += 32;
+             namedDiv.style.fontSize = '22px'
              namedDiv.style.lineHeight = '68px';
              namedDiv.style.borderRadius = '5px';
              namedDiv.style.borderBottom = '2px solid black';
@@ -95,17 +98,19 @@ function handleFile(event){
 }
     if(event.type == 'mouseout'){
         if(number === 8){
-            height -=41;
+            height -=25;
             fixNamedBorder();
         }if(number === 9){
             fixLastBorder();
+            document.getElementById('file9').style.zIndex = 9;
             expandTop +=50;
         }if(number === 10){
             fixLastBorder();
+            document.getElementById('file9').style.zIndex = 9;
             height -=50;
             expandTop +=50;
         }else if (number < 8) {
-             height -= 41;
+             height -= 32;
              namedDiv.style.fontSize = '18px';
              fixNamedBorder();
              fixLastBorder();
@@ -118,3 +123,26 @@ function handleFile(event){
       file.style.top = fileTop + 'px'; 
 }
 }
+moveFolders = ()=>{
+    let top = 45;
+    setTimeout(()=>{
+    for(let i=1;i<10;i++){
+        let folder = document.getElementById(`file${i}`);
+        let link = document.getElementById(`link${i}`);
+        let folderTop = parseInt(folder.style.top) + (top*i);
+        let linkTop = parseInt(link.style.top) + (top*i);
+        folder.style.top = folderTop;
+        link.style.top = linkTop;
+        console.log(folder.style.top);
+    } 
+}, 500); 
+    setTimeout(()=>{
+        for(let i=0;i<10;i++){
+        let folder = document.getElementById(`file${i}`);
+        let link = document.getElementById(`link${i}`);
+        folder.style.transition = 'top .1s .1s';
+        link.style.transition = '.1s .1s';  
+        }  
+    },1500)   
+}
+window.onload = moveFolders()
