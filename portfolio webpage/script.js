@@ -131,7 +131,7 @@ function handleFile(event){
             linkDiv.style.lineHeight = '58px';
             iframeDiv.style.background = 'linear-gradient(#14ffe9, #ffeb3b, #ff00e0)';
             iframeDiv.style.animation = 'rotate 1.5s linear infinite'
-        } if(number === 9){
+        }if(number === 9){
             readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
@@ -140,7 +140,36 @@ function handleFile(event){
             fixIFrame();
             fixLastBorder();
             fix9();
-        }else if(number<8){
+        }if (number === 7){
+            readMeDiv();
+            extendDivUp();
+            setTimeout(()=>{
+                readMe.style.top = parseInt(readMe.style.top)-82;
+            },100);
+            fixIFrame();
+             height += 32;
+             linkDiv.style.fontSize = '22px'
+             linkDiv.style.lineHeight = '58px';
+             linkDiv.style.borderRadius = '5px';
+             linkDiv.style.borderBottom = '2px solid black';
+             iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
+             iframeDiv.style.animation = 'none';
+        }if (number === 6){
+            readMeDiv();
+            extendDivUp();
+            setTimeout(()=>{
+                readMe.style.top = parseInt(readMe.style.top)-82;
+            },100);
+            fixIFrame();
+             height += 32;
+             linkDiv.style.fontSize = '18px'
+             linkDiv.style.lineHeight = '58px';
+             linkDiv.style.borderRadius = '5px';
+             linkDiv.style.borderBottom = '2px solid black';
+             iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
+             iframeDiv.style.animation = 'none';
+        }
+        if(number<6){
             readMeDiv();
             extendDivUp();
             setTimeout(()=>{
@@ -178,7 +207,21 @@ function handleFile(event){
             document.getElementById('file9').style.zIndex = 9;
             },300);
             expandTop +=50;
-        }else if (number < 8) {
+        }if (number === 7){
+            removeReadMe();
+            height -= 32;
+            extendDivDown();
+            linkDiv.style.fontSize = '18px';
+            fixNamedBorder();
+            fixLastBorder(); 
+        }if (number === 6){
+            removeReadMe();
+            height -= 32;
+            extendDivDown();
+            linkDiv.style.fontSize = '15px';
+            fixNamedBorder();
+            fixLastBorder();
+        }if (number < 6) {
          removeReadMe();
          height -= 32;
          extendDivDown();
@@ -219,4 +262,6 @@ moveFolders = ()=>{
         }  
     },1500)   
 }
-window.onload = moveFolders()
+setTimeout(()=>{
+    window.onload = moveFolders();
+},500);
