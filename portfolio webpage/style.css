@@ -112,6 +112,14 @@
     transition: 1s;
     color: red;
     text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
+    line-height: 29px;
+}
+.extend {
+    position: absolute;
+    width: 182;
+    height: 29;
+    left: 80;
+    transition: .1s .2s;
 }
 #link0 {
     height: 18;
@@ -147,6 +155,7 @@
 #link7 {
     z-index: 10;
     font-family: 'Flavors';
+    color: black;
 }
 #link8 {
     border: 5px dotted white;
@@ -175,6 +184,36 @@
     z-index: 12;
     opacity: 0;
     transition: .9s .1s;
+}
+#extend0 {
+    z-index: 3;
+}
+#extend1 {
+    z-index: 4;
+}
+#extend2 {
+    z-index: 5;
+}
+#extend3 {
+    z-index: 6;
+}
+#extend4 {
+    z-index: 7;
+}
+#extend5 {
+    z-index: 8;
+}
+#extend6 {
+    z-index: 9;
+}
+#extend7 {
+    z-index: 10;
+}
+#extend8 {
+    z-index: 11;
+}
+#extend9 {
+    z-index: 12;
 }
 #iframeDiv {
     position: absolute;
