@@ -22,13 +22,15 @@ header {
     font-family: '1942';
     padding-top: 30px;
 }
-.navbar {
+#navBarDiv {
     position: relative;
     top: 70%; 
     font-size: 15px;
     text-shadow: none;
-    color: white;
     background: transparent;
+}
+.container-fluid {
+    color: white;
 }
 .div {
     border: 1px solid black;
