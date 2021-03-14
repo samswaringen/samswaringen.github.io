@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--my own CSS-->
+    <link rel='stylesheet' type='text/css' href='style.css' /> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Landing page</title>
+  </head>
+  <body class = 'body-grid'>
+    <header><span id = 'title'>Sam's Portfolio</span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='default%20page/aboutme.html'>About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='default%20page/links.html'>Links</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href='https://samswaringen.github.io/week3'>Random Painter</a></li>
+                  <li><a class="dropdown-item" href='https://samswaringen.github.io/week4'>PacMan Eraser</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </header>
+      <aside id = 'aside-left'>
+        <a href = 'portfolio webpage/index.html' id = 'portfolioImg'><div id = 'gifDiv' style="width:100%;height:100%;position:relative;background-image: url(cabinet_closed.jpg);">Projects</div></a>
+      </aside>
+    <article>
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PLs1pmxBvOzVpzouqMoz3oZiTqH6ADJ1b5" frameborder="0" allowfullscreen></iframe>
+    </article>
+    <aside class = 'aside-right'>
+        <div class = 'aboutme div'> 
+            <iframe src = 'default%20page/aboutme.html'></iframe>
+        </div>
+        <div class = 'links div'>
+            <iframe src = 'default%20page/links.html'></iframe>
+        </div>
+    </aside>
+    <footer>Made by Sam Swaringen 2021</footer>
+    <!--my own JS-->
+    <script src = 'script.js'></script>
+    <!--Bootstap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  </body>
+</html>
