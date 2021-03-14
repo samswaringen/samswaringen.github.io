@@ -2,6 +2,14 @@
     font-family: '1942';
     src: url('1942.ttf');
 }
+@font-face{
+    font-family: 'BartonBus';
+    src: url('BartonBus.ttf')
+}
+@font-face{
+    font-family: 'KingBus';
+    src: url('KingBus.ttf');
+}
 @keyframes rotate {
     0% {
       filter: hue-rotate(0deg);
@@ -17,12 +25,7 @@
   @-ms-viewport {
     width: device-width ;
   }
-#background {
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -10px;
-    width: 100%;
-    height: 100%;
+body {
     background-image: url('blackandwhite.png');
 }
 #header {
@@ -37,6 +40,16 @@
     text-shadow: 2px -2px 2px black, 0 0 20px gray, 0 0 5px grey;
     font-weight: bolder;
     background: rgb(0,0,0,.8)
+}
+#navBarDiv {
+    position: relative;
+    top: 6.7%; 
+    font-size: 15px;
+    text-shadow: none;
+    background-color: black;
+    width: 50%;
+    z-index: 2;
+
 }
 #folders {
     position: absolute;
@@ -154,11 +167,15 @@
 }
 #link7 {
     z-index: 10;
-    font-family: 'Flavors';
+    font-family: 'KingBus';
     color: black;
+    text-shadow:1px 1px black, 2px 2px 1px green, 3px 3px 2px yellow, 5px 5px 3px red;
+    background-image: url(busbackgroud.jpg);
+    background-size: contain;
 }
 #link8 {
     border: 5px dotted white;
+    border-bottom: none;
     width: 176;
     z-index: 11;
     background-color: black;
@@ -169,6 +186,7 @@
     line-height: 29px;
 }
 #link9 {
+    border-bottom: 2px solid black;
     border-radius: 5px;
     padding-top: 17px;
     background-image: url(paint.png);
@@ -176,14 +194,6 @@
     color: white;
     text-shadow: 0 0 2px black, 0 0 5px black, 0 0 20px black;
     z-index: 12;
-}
-#link10 {
-    border-radius: 5px;
-    border: 2px solid black;
-    background-color: none;
-    z-index: 12;
-    opacity: 0;
-    transition: .9s .1s;
 }
 #extend0 {
     z-index: 3;
