@@ -1,249 +1,108 @@
 @font-face {
     font-family: '1942';
-    src: url('1942.ttf');
+    src: url('default page/1942.ttf');
+
 }
-@keyframes rotate {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-    }
+.body-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:  repeat(8,1fr);
+    gap: 5px;
+    height: 100vh;
+
 }
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-  }
-  @-ms-viewport {
-    width: device-width ;
-  }
-#background {
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -10px;
-    width: 100%;
-    height: 100%;
-    background-image: url('blackandwhite.png');
-}
-#header {
-    position: absolute;
-    width: 50%;
-    height: 50;
-    border-bottom: 3px solid white;
+header {
+    text-align: center;
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    background-image: url('falling.gif');
+    background-size: cover;
+    font: 50px bold black;
+    text-shadow: 2px 2px 1px rgb(56, 56, 56);
     font-family: '1942';
-    font-size: 40px;
-    text-align: left;
-    color: whitesmoke;
-    text-shadow: 2px -2px 2px black, 0 0 20px gray, 0 0 5px grey;
-    font-weight: bolder;
-    background: rgb(0,0,0,.8)
+    padding-top: 30px;
 }
-#folders {
-    position: absolute;
-    width: 900;
-    height: 725;
-    overflow: hidden;
+.navbar {
+    position: relative;
+    top: 70%; 
+    font-size: 15px;
+    text-shadow: none;
+    color: white;
+    background: transparent;
 }
-.files {
-    position: absolute;
-    transition: top 1s;
-    height: 650px;
-    top: 650px;
+.div {
+    border: 1px solid black;
 }
-#file0 {
-    top: 25;
-
-
+#aside-left {
+    grid-column: 1 / 2;
+    grid-row: 3 / 8;
+    padding-left: 5px;
 }
-#file1 {
-    top: 50;
-    z-index: 1;
-
+.project {
+    position: relative;
+    height: 100%;
+    margin-left: 5px;
 }
-#file2 {
-    top: 75;
-    z-index: 2;
-
+article {
+    grid-column: 2 / 4;
+    grid-row: 3 / 8;
+    background: gray;
 }
-#file3 {
-    top: 100;
-    z-index: 3;
-
+.aside-right {
+    grid-column: 4 / 5;
+    grid-row: 3 / 8;
 }
-#file4 {
-    top: 125;
-    z-index: 4;
-
-}
-#file5 {
-    top: 150;
-    z-index: 5;
-
-}
-#file6 {
-    top: 175;
-    z-index: 6;
-
-}
-#file7 {
-    top: 200;
-    z-index: 7;
-
-}
-#file8 {
-    top: 225;
-    z-index: 8;
-
-}
-#file9 {
-    top: 250;
-    z-index: 9;
-
+.aboutme {
+    position: relative;
+    height: 75%;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }
 .links {
-    position: absolute;
-    left: 80;
-    width: 182;
-    text-align: center;
-    border: 2px solid black;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-    background-image: url(paper.jpg);
-    transition: 1s;
-    color: red;
-    text-shadow: 2px 2px 5px rgb(247, 152, 152), 0 0 5px white, 0 0 25px white;
-    line-height: 29px;
-}
-.extend {
-    position: absolute;
-    width: 182;
-    height: 29;
-    left: 80;
-    transition: .1s .2s;
-}
-#link0 {
-    height: 18;
-    z-index: 3;
-    font-family:'Modak';
-    color: black;
-    text-shadow: 2px 2px 5px rgb(172, 171, 171), 0 0 5px white, 0 0 25px white;    
-}
-#link1 {
-    z-index: 4;
-    font-family:'Slackey';
-}
-#link2 {
-    z-index: 5;
-    font-family:'Monofett';
-}
-#link3 {
-    z-index: 6;
-    font-family: 'Knewave';
-}
-#link4 {
-    z-index: 7;
-    font-family: 'Fascinate';
-}
-#link5 {
-    z-index: 8;
-    font-family: 'Miltonian';
-}
-#link6 {
-    z-index: 9;
-    font-family: 'Butcherman';
-}
-#link7 {
-    z-index: 10;
-    font-family: 'Flavors';
-    color: black;
-}
-#link8 {
-    border: 5px dotted white;
-    width: 176;
-    z-index: 11;
-    background-color: black;
-    background-image: none;
-    font: 10px 'Press Start 2P';
-    color: white;
-    text-shadow: 0 0 2px white, 0 0 5px white, 0 0 25px white;
-    line-height: 29px;
-}
-#link9 {
-    border-radius: 5px;
-    padding-top: 17px;
-    background-image: url(paint.png);
-    font: bolder  22px 'Barrio';
-    color: white;
-    text-shadow: 0 0 2px black, 0 0 5px black, 0 0 20px black;
-    z-index: 12;
-}
-#link10 {
-    border-radius: 5px;
-    border: 2px solid black;
-    background-color: none;
-    z-index: 12;
-    opacity: 0;
-    transition: .9s .1s;
-}
-#extend0 {
-    z-index: 3;
-}
-#extend1 {
-    z-index: 4;
-}
-#extend2 {
-    z-index: 5;
-}
-#extend3 {
-    z-index: 6;
-}
-#extend4 {
-    z-index: 7;
-}
-#extend5 {
-    z-index: 8;
-}
-#extend6 {
-    z-index: 9;
-}
-#extend7 {
-    z-index: 10;
-}
-#extend8 {
-    z-index: 11;
-}
-#extend9 {
-    z-index: 12;
-}
-#iframeDiv {
-    position: absolute;
-    left: 875;
-    top: 18;
-    background: center / contain repeat url(wallpaper.jpg);
-    animation: none;
-    height: 713px;
-    width: 580px;
-    border-radius: 5px;
-}
-#inner-Frame {
-    position: absolute;
-    left: 890;
-    top: 33;
-    background: none;
-    animation: none;
-}
-#newFrame {
     position: relative;
-    background: white;
+    height: 25%;
+    margin-right: 5px;
+}
+footer {
+    padding-top: 50px;
+    grid-column: 1 / 5;
+    grid-row: 8 / 9;
+    text-align: right;
+    background-image: url('falling.gif');
+    background-size: cover;
+    color: white;
+    text-shadow:1px 1px 1px whitesmoke;
+    font-family: '1942';
 }
 iframe {
-    border: 1px solid whitesmoke;
-    box-shadow: 0 0 2px whitesmoke;
+    width: 100%;
+    height: 100%;
 }
-#pacPic {
-    position: relative;
-    margin-right: 4px;
+#portfolioImg {
+    font-family: '1942';
+    text-decoration: none;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
-#ghostPic {
-    background-color: none;
+#title {
+    position: absolute;
+    left:33%;
+    width:50%;
+    animation: animated-text 4s steps(16,end) 1s 1 normal both,
+               animated-cursor 600ms steps(16,end) infinite;
+    overflow: hidden;
+    border-right: solid 3px rgba(255,255,255,.75);
+    color: rgba(255,255,255,.70);
+    white-space: nowrap;
 }
+
+@keyframes animated-text{
+    from{width: 0;}
+    to {width:33%;}
+  }
+@keyframes animated-cursor{
+    from{border-right-color: white}
+    to{border-right-color: transparent;}
+  }
