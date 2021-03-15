@@ -264,4 +264,4 @@ moveFolders = ()=>{
 }
 setTimeout(()=>{
     window.onload = moveFolders();
-},500);
+},200);
