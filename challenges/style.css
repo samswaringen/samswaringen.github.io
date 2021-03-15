@@ -1,0 +1,57 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+    height: 100vh;
+}
+.userInput {
+    grid-column: 1 / 2;
+    background-color: mediumspringgreen;
+}
+.output {
+    grid-column: 2 / 3;
+    background-color: mediumorchid;
+}
+#likes {
+    grid-row: 1 / 2;
+}
+#likes-output {
+    grid-row: 1 / 2;
+}
+#opposite {
+    grid-row: 2 / 3;
+}
+#opposite-output {
+    grid-row: 2 / 3;
+}
+#digitalRoot {
+    grid-row: 3 / 4;
+}
+#digital-output {
+    grid-row: 3 / 4;
+}
+#highLow {
+    grid-row: 4/ 5;
+}
+#highlow-output {
+    grid-row: 4 / 5;
+}
+#myAtoi {
+    grid-row: 5 / 6;
+}
+#myAtoi-output {
+    grid-row: 5 / 6;
+}
+#persistence {
+    grid-row: 6 / 7;
+}
+#persist-output {
+    grid-row: 6 / 7;
+}
+#planeSeat {
+    grid-row: 7 / 8;
+}
+#planeSeat-output {
+    grid-row: 7 / 8;
+}

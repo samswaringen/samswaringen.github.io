@@ -18,7 +18,13 @@ function likes(names) {
             return `${names[0]}, ${names[1]} and ${names.length -2} others like this`;
         }
   }
-
+runLikes = ()=>{
+    input = document.getElementById('likes-input').value;
+    inputArr = input.split(' ');
+    output = document.getElementById('likes-output');
+    output.innerHTML ='Answer:';
+    output.innerHTML += likes(inputArr);
+}   
   console.log(likes(['Sam']));
   console.log(likes(['Sam', 'Kayleigh']));
   console.log(likes(['Sam', 'Kayleigh', 'Lilly']));

@@ -10,8 +10,6 @@ function planeSeat(a){
         a1 = Number(a[0]+a[1]);
         a2 = a[2];
     }
-    console.log(`Row:${a1}`);
-    console.log(`Seat:${a2}`);
     if (a1 < 21){
         position += 'Front';
     }else if (a1>20 && a1<41){
@@ -34,7 +32,14 @@ function planeSeat(a){
     }else {
         position = 'No Such Seat!!';
 }
-    return position;
+    return `Row:${a1} Seat:${a2} ${position}`;
+}
+runPlaneSeat = ()=>{
+    input = document.getElementById('planeSeat-input').value;
+    console.log(input);
+    output = document.getElementById('planeSeat-output');
+    output.innerHTML = 'Answer: '; 
+    output.innerHTML += planeSeat(input);
 }
 console.log(planeSeat('2B'));
 console.log(planeSeat('22K'));

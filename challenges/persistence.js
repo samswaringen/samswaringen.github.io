@@ -15,7 +15,13 @@ function persistence(num) {
   while (num > 9){
     multiply();  
   }
-  return `Total amount of runs: ${persCount}`
+  return `Total amount of runs: ${persCount}<br>Your final number is: ${num}`
+}
+runPersist = ()=>{
+  input = document.getElementById('persist-input').value;
+  output = document.getElementById('persist-output');
+  output.innerHTML = 'Answer: ';
+  output.innerHTML += persistence(input);
 }
 console.log(persistence(399));
 console.log(persistence(7398));

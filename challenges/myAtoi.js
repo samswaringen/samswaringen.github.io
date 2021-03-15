@@ -57,6 +57,12 @@ myAtoi = (s)=>{
     }
     return numNum;
 }
+runAtoi = ()=>{
+    input = document.getElementById('myAtoi-input').value;
+    output = document.getElementById('myAtoi-output');
+    output.innerHTML = 'Answer: ';
+    output.innerHTML += myAtoi(input); 
+}
 console.log(myAtoi(""));
 console.log(myAtoi("-  42"));
 console.log(myAtoi('+1'));

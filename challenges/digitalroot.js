@@ -33,4 +33,9 @@ function digital_root(n) {
         return newTotal;
     }
 }
-  console.log(digital_root(1678982999999598));
+runDigital = ()=>{
+    input = Number(document.getElementById('digital-input').value);
+    output = document.getElementById('digital-output');
+    output.innerHTML = 'Answer: ';
+    output.innerHTML += digital_root(input);
+}
