@@ -44,11 +44,12 @@ body {
 #navBarDiv {
     position: relative;
     top: 6.7%; 
+    font-family: '1942';
     font-size: 15px;
     text-shadow: none;
     background-color: black;
     width: 50%;
-    z-index: 2;
+    z-index: 1;
 
 }
 #folders {
@@ -179,7 +180,6 @@ body {
 #link8 {
     border: 5px dotted white;
     border-bottom: none;
-    width: 176;
     z-index: 11;
     background-color: black;
     background-image: none;
