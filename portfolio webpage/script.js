@@ -40,7 +40,7 @@ function handleFile(event){
         newFrame.style.height = '683px';
         newFrame.style.width = '550px';
         innerFrame.style.top = '33px';
-        innerFrame.style.left = '890px';
+        innerFrame.style.left = '870px';
     }
     fixZ = ()=>{
         let fileZ = Number(file.style.zIndex);
@@ -73,8 +73,8 @@ function handleFile(event){
         readMe.id = 'readMe';
         readMe.style.top = parseInt(linkDiv.style.top) + 55;
         readMe.style.transition = '.1s .1s';
-        readMe.style.left = '300px'
-        readMe.style.width = '270px';
+        readMe.style.left = '285px'
+        readMe.style.width = '340px';
         readMe.style.height = '100px';
         readMe.style.zIndex = number + 2;
         document.getElementById('folders').appendChild(readMe);
@@ -111,7 +111,7 @@ function handleFile(event){
         newFrame.style.height = '585px';
         newFrame.style.width = '457px';
         innerFrame.style.top = '80px';
-        innerFrame.style.left = '938px';
+        innerFrame.style.left = '918px';
         iframeDiv.style.background = `url('frame.jpg')`;
         iframeDiv.style.backgroundSize = '660px 776px';
         iframeDiv.style.backgroundPosition = '-40px -32px';
@@ -168,8 +168,20 @@ function handleFile(event){
              linkDiv.style.borderBottom = '2px solid black';
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
-        }
-        if(number<6){
+        }if (number === 5){
+            readMeDiv();
+            extendDivUp();
+            setTimeout(()=>{
+                readMe.style.top = parseInt(readMe.style.top)-82;
+            },100);
+            fixIFrame();
+             height += 32;
+             linkDiv.style.lineHeight = '58px';
+             linkDiv.style.borderRadius = '5px';
+             linkDiv.style.borderBottom = '2px solid black';
+             iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
+             iframeDiv.style.animation = 'none';
+        }if(number<5){
             readMeDiv();
             extendDivUp();
             setTimeout(()=>{
@@ -221,7 +233,13 @@ function handleFile(event){
             linkDiv.style.fontSize = '15px';
             fixNamedBorder();
             fixLastBorder();
-        }if (number < 6) {
+        }if (number === 5){
+            removeReadMe();
+         height -= 32;
+         extendDivDown();
+         fixNamedBorder();
+         fixLastBorder();
+        }if (number < 5) {
          removeReadMe();
          height -= 32;
          extendDivDown();

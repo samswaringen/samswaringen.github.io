@@ -32,6 +32,7 @@ body {
     position: absolute;
     width: 50%;
     height: 50;
+    padding-left: 12px;
     border-bottom: 3px solid white;
     font-family: '1942';
     font-size: 40px;
@@ -54,8 +55,9 @@ body {
 }
 #folders {
     position: absolute;
+    left: 90;
     width: 900;
-    height: 725;
+    height: 680;
     overflow: hidden;
 }
 .files {
@@ -135,6 +137,10 @@ body {
     left: 80;
     transition: .1s .2s;
 }
+#readMe {
+    border-bottom: 2px solid black;
+    border-radius: 5px 5px 5px 5px;
+}
 #link0 {
     height: 18;
     z-index: 3;
@@ -161,6 +167,9 @@ body {
 #link5 {
     z-index: 8;
     font-family: 'Miltonian';
+    color: rgb(92, 92, 92);
+    text-shadow: none;
+    font-size: 30px;
 }
 #link6 {
     z-index: 9;
@@ -230,7 +239,7 @@ body {
 }
 #iframeDiv {
     position: absolute;
-    left: 875;
+    left: 855;
     top: 18;
     background: center / contain repeat url(wallpaper.jpg);
     animation: none;
@@ -240,7 +249,7 @@ body {
 }
 #inner-Frame {
     position: absolute;
-    left: 890;
+    left: 870;
     top: 33;
     background: none;
     animation: none;
