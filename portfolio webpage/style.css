@@ -10,6 +10,10 @@
     font-family: 'KingBus';
     src: url('KingBus.ttf');
 }
+@font-face{
+    font-family: 'typewriter';
+    src: url('typewriter.ttf');
+}
 @keyframes rotate {
     0% {
       filter: hue-rotate(0deg);
@@ -140,6 +144,16 @@ body {
 #readMe {
     border-bottom: 2px solid black;
     border-radius: 5px 5px 5px 5px;
+    color: black;
+    line-height: 12px;
+    text-shadow: none;
+    font-family: 'typewriter';
+    font-size: 12px;
+    overflow:hidden;
+}
+.title {
+    font-size: 15px;
+    text-shadow: 1px 1px 1px grey;
 }
 #link0 {
     height: 18;
@@ -175,8 +189,10 @@ body {
     z-index: 9;
     font-size: 15px;
     color: black;
-    text-shadow: 2px 2px limegreen;
+    text-shadow: 1px 1px rgb(250, 64, 17), -1px -1px rgb(250, 64, 17);
     font-family: 'Butcherman';
+    background-image: url('challenges.jpg');
+    background-size: cover;
 }
 #link7 {
     z-index: 10;

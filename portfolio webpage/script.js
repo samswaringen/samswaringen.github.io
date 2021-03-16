@@ -67,7 +67,7 @@ function handleFile(event){
         });
         }
     }
-    readMeDiv = ()=>{
+    readMeDiv = async ()=>{
         let readMe = document.createElement('div');
         readMe.classList = 'links';
         readMe.id = 'readMe';
@@ -75,9 +75,16 @@ function handleFile(event){
         readMe.style.transition = '.1s .1s';
         readMe.style.left = '285px'
         readMe.style.width = '340px';
-        readMe.style.height = '100px';
+        readMe.style.height = '115px';
         readMe.style.zIndex = number + 2;
+        readMe.innerHTML = await getReadMe();
         document.getElementById('folders').appendChild(readMe);
+    }
+    async function getReadMe(){
+        const url = document.getElementById(`website${number}`) + '/README.md';
+        const response = await fetch(url);
+        const text = await response.text();
+        return text;
     }
     removeReadMe = ()=>{
         setTimeout(()=>{
@@ -89,15 +96,22 @@ function handleFile(event){
     }
     extendDivUp = ()=>{
         let extDiv = document.getElementById(`extend${number}`)
+        extWidth = parseInt(extDiv.style.width);
+        console.log(extWidth);
+        extWidth += 500;
+        extDiv.style.width = extWidth + 'px';
         extTop = parseInt(extDiv.style.top);
         extTop -= 100;
         extDiv.style.top = extTop + 'px';
         extHeight = parseInt(extDiv.style.height);
-        extHeight += 100;
+        extHeight += 125;
         extDiv.style.height = extHeight + 'px';
     }
     extendDivDown = ()=>{
         let extDiv = document.getElementById(`extend${number}`)
+        extWidth = parseInt(extDiv.style.width);
+        extWidth -= 500;
+        extDiv.style.width = extWidth + 'px';
         extTop = parseInt(extDiv.style.top);
         extTop += 100;
         extDiv.style.top = extTop + 'px';
@@ -270,7 +284,7 @@ moveFolders = ()=>{
         link.style.top = linkTop;
         extend.style.top = extendTop;
     } 
-}, 500); 
+}, 100); 
     setTimeout(()=>{
         for(let i=0;i<10;i++){
         let folder = document.getElementById(`file${i}`);
@@ -278,7 +292,7 @@ moveFolders = ()=>{
         folder.style.transition = 'top .1s .2s';
         link.style.transition = '.1s .2s';  
         }  
-    },1500)   
+    },1100)   
 }
 setTimeout(()=>{
     window.onload = moveFolders();
