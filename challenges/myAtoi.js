@@ -60,12 +60,13 @@ myAtoi = (s)=>{
 runAtoi = ()=>{
     input = document.getElementById('myAtoi-input').value;
     output = document.getElementById('myAtoi-output');
-    output.innerHTML = 'Answer: ';
+    outer = document.getElementById('myAtoi-outer');
+    outer.style.backgroundColor = 'white';
+    outer.style.textShadow = '1px 1px 1px red, 2px 2px 1px orange, 3px 3px 1px yellow, 4px 4px 1px green, 5px 5px 1px blue';
+    setTimeout(()=>{
+        outer.style.backgroundColor = 'black';
+        outer.style.textShadow = '-1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white';
+    }, 400)
+    output.innerHTML = '';
     output.innerHTML += myAtoi(input); 
 }
-console.log(myAtoi(""));
-console.log(myAtoi("-  42"));
-console.log(myAtoi('+1'));
-console.log(myAtoi('+  1'));
-console.log(myAtoi('0000-+1'));
-console.log(myAtoi('-000012a42'));

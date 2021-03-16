@@ -9,8 +9,13 @@ function highAndLow(numbers){
 runHighLow=()=>{
   input = document.getElementById('highlow-input').value;
   output = document.getElementById('highlow-output');
-  output.innerHTML = 'Answer: ';
+  outer = document.getElementById('highlow-outer');
+  outer.style.backgroundColor = 'white';
+  outer.style.textShadow = '1px 1px 1px red, 2px 2px 1px orange, 3px 3px 1px yellow, 4px 4px 1px green, 5px 5px 1px blue';
+  setTimeout(()=>{
+      outer.style.backgroundColor = 'black';
+      outer.style.textShadow = '-1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white';
+  }, 400)
+  output.innerHTML = '';
   output.innerHTML += highAndLow(input);
 }
-  console.log(highAndLow('3461349363'));
-  console.log(highAndLow('20864'))

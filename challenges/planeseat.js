@@ -8,7 +8,7 @@ function planeSeat(a){
         a2 = a[1];
     }else{
         a1 = Number(a[0]+a[1]);
-        a2 = a[2];
+        a2 = a[2].toUpperCase();
     }
     if (a1 < 21){
         position += 'Front';
@@ -36,11 +36,14 @@ function planeSeat(a){
 }
 runPlaneSeat = ()=>{
     input = document.getElementById('planeSeat-input').value;
-    console.log(input);
     output = document.getElementById('planeSeat-output');
-    output.innerHTML = 'Answer: '; 
+    outer = document.getElementById('planeSeat-outer');
+    outer.style.backgroundColor = 'white';
+    outer.style.textShadow = '1px 1px 1px red, 2px 2px 1px orange, 3px 3px 1px yellow, 4px 4px 1px green, 5px 5px 1px blue';
+    setTimeout(()=>{
+        outer.style.backgroundColor = 'black';
+        outer.style.textShadow = '-1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white';
+    }, 400)
+    output.innerHTML = ''; 
     output.innerHTML += planeSeat(input);
 }
-console.log(planeSeat('2B'));
-console.log(planeSeat('22K'));
-console.log(planeSeat('32I'));

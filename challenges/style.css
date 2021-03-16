@@ -2,8 +2,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(7, 1fr);
-    gap: 10px;
-    height: 100vh;
+    gap: 5px;
+    height: 97vh;
 }
 .userInput {
     grid-column: 1 / 2;
@@ -11,47 +11,59 @@ body {
 }
 .output {
     grid-column: 2 / 3;
-    background-color: mediumorchid;
+    background-color:black;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white;
+    padding-top:4px;
 }
 #likes {
     grid-row: 1 / 2;
 }
-#likes-output {
+#likes-outer {
     grid-row: 1 / 2;
 }
 #opposite {
     grid-row: 2 / 3;
 }
-#opposite-output {
+#opposite-outer {
     grid-row: 2 / 3;
 }
 #digitalRoot {
     grid-row: 3 / 4;
 }
-#digital-output {
+#digital-outer {
     grid-row: 3 / 4;
 }
 #highLow {
     grid-row: 4/ 5;
 }
-#highlow-output {
+#highlow-outer {
     grid-row: 4 / 5;
 }
 #myAtoi {
     grid-row: 5 / 6;
 }
-#myAtoi-output {
+#myAtoi-outer {
     grid-row: 5 / 6;
 }
 #persistence {
     grid-row: 6 / 7;
 }
-#persist-output {
+#persist-outer {
     grid-row: 6 / 7;
 }
 #planeSeat {
     grid-row: 7 / 8;
 }
-#planeSeat-output {
+#planeSeat-outer {
     grid-row: 7 / 8;
+}
+.answer {
+    position: relative;
+    top:10%;
+    width:100%;
+    height: 75%;
+    background-color: white;
 }
