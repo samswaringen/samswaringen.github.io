@@ -26,6 +26,7 @@ addNavBar = ()=>{
               <li><a class="dropdown-item" href='https://samswaringen.github.io/week4'>PacMan Eraser</a></li>
               <li><a class="dropdown-item" href="https://samswaringen.github.io/bustracker">Bus Tracker</a></li>
               <li><a class="dropdown-item" href="https://samswaringen.github.io/challenges">Coding Challenges</a></li>
+              <li><a class="dropdown-item" href="https://samswaringen.github.io/eyes">EYES</a></li>
             </ul>
           </li>
         </ul>
