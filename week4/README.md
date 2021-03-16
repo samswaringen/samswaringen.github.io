@@ -1,4 +1,4 @@
-<h1>PacMan Eraser</h1><br> 
+<strong>PacMan Eraser</strong><br> 
 
 Use Arrow Keys to control PacMan and spacebar to stop him moving<br>
 The small colorful dots give you 1 point and INCREASE the PacMan's size<br>
