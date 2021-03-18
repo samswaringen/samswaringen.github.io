@@ -46,26 +46,25 @@ function handleFile(event){
         let fileZ = Number(file.style.zIndex);
         let fixLink = document.getElementById(`link${number-1}`);
         if (fileZ === number + 2){
-          if(number != 0)  
-            setTimeout(()=>{
-                fixLink.style.zIndex = number +2;
-            })
-        setTimeout(()=>{
-            fixFile = document.getElementById(`file${number+1}`);
-            fixFile.style.zIndex = number + 1;
-        })
-        file.style.zIndex = number;
+          if(number != 0){  
+            fixLink.style.zIndex = number +2;
+          }
+          if( number <9){
+          fixFile = document.getElementById(`file${number+1}`);
+          fixFile.style.zIndex = number + 1; 
+          } 
+          file.style.zIndex = number;
         }else{
-        fileZ = number + 2;
-        file.style.zIndex = fileZ;
+          fileZ = number + 2;
+          file.style.zIndex = fileZ;
             if(number != 0){
                 fixLink.style.zIndex = number;
             }
-        setTimeout(()=>{
-            fixFile = document.getElementById(`file${number+1}`);
-            fixFile.style.zIndex = number + 2;
-        });
-        }
+          if(number<9){
+          fixFile = document.getElementById(`file${number+1}`);
+          fixFile.style.zIndex = number + 2;
+          }
+        }  
     }
     readMeDiv = async ()=>{
         let readMe = document.createElement('div');
