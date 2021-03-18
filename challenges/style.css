@@ -1,20 +1,28 @@
+@font-face {
+    font-family: 'chalk';
+    src: url('chalk.ttf')
+}
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(7, 90px);
     height: 100vh;
+    background-image: url('chalkboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .userInput {
     grid-column: 1 / 2;
-    background-color: mediumspringgreen;
+    color: white;
+    font-family: 'chalk';
 }
 .output {
     grid-column: 2 / 3;
-    background-color:black;
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
     text-shadow: -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white;
+    font-family: 'chalk';
 }
 .input {
     color: gray;
@@ -68,5 +76,5 @@ body {
     position: relative;
     width:100%;
     height: 65px;
-    background-color: white;
+
 }
