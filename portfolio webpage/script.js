@@ -174,13 +174,16 @@ function handleFile(event){
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
             fixIFrame();
-             height += 32;
-             linkDiv.style.fontSize = '18px'
-             linkDiv.style.lineHeight = '58px';
-             linkDiv.style.borderRadius = '5px';
-             linkDiv.style.borderBottom = '2px solid black';
-             iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
-             iframeDiv.style.animation = 'none';
+            iframeDiv.style.background = `url('chalkboard_frame.jpg')`;
+            iframeDiv.style.backgroundSize = '635px 769px';
+            iframeDiv.style.backgroundPosition = '-33px -30px';
+            iframeDiv.style.animation = 'none';
+            newFrame.style.border = 'none';
+            height += 32;
+            linkDiv.style.fontSize = '18px'
+            linkDiv.style.lineHeight = '58px';
+            linkDiv.style.borderRadius = '5px';
+            linkDiv.style.borderBottom = '2px solid black';
         }if (number === 5){
             readMeDiv();
             extendDivUp();
