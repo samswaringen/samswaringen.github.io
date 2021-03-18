@@ -24,7 +24,7 @@ runPersist = ()=>{
   outer = document.getElementById('persist-outer');
   outer.style.textShadow = '1px 1px 1px red, 2px 2px 1px orange, 3px 3px 1px yellow, 4px 4px 1px green, 5px 5px 1px blue';
   setTimeout(()=>{
-      outer.style.textShadow = '-1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white, 1px 1px 1px white';
+      outer.style.textShadow = 'none';
   }, 400)
   output.innerHTML = '';
   document.getElementById('persist-input').value = '';
