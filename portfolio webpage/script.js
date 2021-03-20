@@ -144,7 +144,7 @@ async function handleFile(event){
             linkDiv.style.borderRadius = '5px 5px 5px 5px';
             linkDiv.style.lineHeight = '58px';
             iframeDiv.style.background = 'linear-gradient(#14ffe9, #ffeb3b, #ff00e0)';
-            iframeDiv.style.animation = 'rotate 1.5s linear infinite'
+            iframeDiv.style.animation = 'rotate 1.5s linear infinite';
         }if(number === 9){
             readMeDiv();
             setTimeout(()=>{
@@ -211,8 +211,8 @@ async function handleFile(event){
              linkDiv.style.lineHeight = '58px';
              linkDiv.style.borderRadius = '5px';
              linkDiv.style.borderBottom = '2px solid black';
-             iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
-             iframeDiv.style.animation = 'none';
+             iframeDiv.style.background = 'linear-gradient(red, black, red)';
+             iframeDiv.style.animation = 'rotateRed 1s linear infinite';
         }
      fixZ();
      lastLink.style.top = expandTop + 'px';  
