@@ -9,7 +9,7 @@ for(let i = 0; i<10; i++){
 
 }
 
-function handleFile(event){
+async function handleFile(event){
     let name = event.target.id;
     console.log(name);
     let number = Number(name.split('d').pop());
@@ -133,11 +133,11 @@ function handleFile(event){
     }
     if(event.type == 'mouseover'){
         if(number === 8 ){
+            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
-            extendDivUp();
-            readMeDiv();
+            extendDivUp()
             fixIFrame();
             height += 25;
             linkDiv.style.borderBottom = '5px dotted white';
@@ -146,20 +146,20 @@ function handleFile(event){
             iframeDiv.style.background = 'linear-gradient(#14ffe9, #ffeb3b, #ff00e0)';
             iframeDiv.style.animation = 'rotate 1.5s linear infinite'
         }if(number === 9){
+            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
             extendDivUp();
-            readMeDiv();
             fixIFrame();
             fixLastBorder();
             fix9();
         }if (number === 7){
-            extendDivUp();
             readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
+            extendDivUp();
             fixIFrame();
              height += 32;
              linkDiv.style.fontSize = '22px'
@@ -169,11 +169,11 @@ function handleFile(event){
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
         }if (number === 6){
-            extendDivUp();
             readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
+            extendDivUp();
             fixIFrame();
             iframeDiv.style.background = `url('chalkboard_frame.jpg')`;
             iframeDiv.style.backgroundSize = '635px 769px';
@@ -187,11 +187,11 @@ function handleFile(event){
             linkDiv.style.borderRadius = '5px';
             linkDiv.style.borderBottom = '2px solid black';
         }if (number === 5){
-            extendDivUp();
             readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
+            extendDivUp();
             fixIFrame();
              height += 32;
              linkDiv.style.lineHeight = '58px';
@@ -201,10 +201,10 @@ function handleFile(event){
              iframeDiv.style.animation = 'none';
         }if(number<5){
             readMeDiv();
-            extendDivUp();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
+            extendDivUp();
             fixIFrame();
              height += 32;
              linkDiv.style.fontSize = '22px'
