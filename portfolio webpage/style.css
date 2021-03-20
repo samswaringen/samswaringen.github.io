@@ -3,10 +3,6 @@
     src: url('1942.ttf');
 }
 @font-face{
-    font-family: 'BartonBus';
-    src: url('BartonBus.ttf')
-}
-@font-face{
     font-family: 'KingBus';
     src: url('KingBus.ttf');
 }
@@ -30,7 +26,7 @@
     width: device-width ;
     zoom: 1.0 ;
   }
-  @-ms-viewport {
+@-ms-viewport {
     width: device-width ;
   }
 body {
@@ -53,7 +49,7 @@ body {
 #navBarDiv {
     position: absolute;
     top: 6.7%; 
-    font-family: '1942';
+    font-family: 'typewriter';
     font-size: 15px;
     text-shadow: none;
     background-color: black;
