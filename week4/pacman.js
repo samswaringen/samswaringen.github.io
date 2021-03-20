@@ -335,7 +335,7 @@ function makeBall(xcoord, ycoord, color) {
 }
 function makeBox(xcoord, ycoord, height, width){
   box = document.createElement('div')
-  box.style.backgroundColor = 'white';
+  box.style.backgroundColor = 'black';
   box.className = `box`;
   box.style.height = height
   box.style.width = width;
@@ -362,7 +362,7 @@ function factory(total) {
   }
   for(let i = 0; i < total / 10; i++){
     size = 20;
-    makeBall(cirPosX[getRandom(100)], cirPosY[getRandom(100)], 'black');
+    makeBall(cirPosX[getRandom(100)], cirPosY[getRandom(100)], 'white');
     let newBall = []; 
     newBall.push(parseInt(ball.style.left));
     newBall.push(parseInt(ball.style.top));
