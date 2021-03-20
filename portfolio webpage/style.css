@@ -14,6 +14,10 @@
     font-family: 'typewriter';
     src: url('typewriter.ttf');
 }
+@font-face {
+    font-family: 'data';
+    src: url('data.ttf');
+}
 @keyframes rotate {
     0% {
       filter: hue-rotate(0deg);
@@ -55,7 +59,12 @@ body {
     background-color: black;
     width: 50%;
     z-index: 1;
-
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
 }
 #folders {
     position: absolute;
@@ -142,6 +151,7 @@ body {
     transition: .1s .2s;
 }
 #readMe {
+    position: relative;
     border-bottom: 2px solid black;
     border-radius: 5px 5px 5px 5px;
     color: black;
@@ -149,7 +159,12 @@ body {
     text-shadow: none;
     font-family: 'typewriter';
     font-size: 12px;
-    overflow:hidden;
+    overflow: hidden;
+}
+#readMe a {
+    color:black;
+    text-decoration: none;
+    font-size: bold;
 }
 .title {
     font-size: 15px;
@@ -158,25 +173,25 @@ body {
 #link0 {
     height: 18;
     z-index: 3;
-    font-family:'Modak';
+    font-family:'1942';
     color: black;
     text-shadow: 2px 2px 5px rgb(172, 171, 171), 0 0 5px white, 0 0 25px white;    
 }
 #link1 {
     z-index: 4;
-    font-family:'Slackey';
+    font-family:'1942';
 }
 #link2 {
     z-index: 5;
-    font-family:'Monofett';
+    font-family:'1942';
 }
 #link3 {
     z-index: 6;
-    font-family: 'Knewave';
+    font-family: '1942';
 }
 #link4 {
     z-index: 7;
-    font-family: 'Fascinate';
+    font-family: '1942';
 }
 #link5 {
     z-index: 8;
@@ -189,8 +204,8 @@ body {
     z-index: 9;
     font-size: 15px;
     color: black;
-    text-shadow: 1px 1px rgb(250, 64, 17), -1px -1px rgb(250, 64, 17);
-    font-family: 'Butcherman';
+    text-shadow: 1px 1px rgb(250, 64, 17), -1px -1px rgb(250, 64, 17), -1px 1px rgb(250, 64, 17), 1px -1px rgb(250, 64, 17);;
+    font-family: 'data';
     background-image: url('challenges.jpg');
     background-size: cover;
 }

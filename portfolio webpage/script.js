@@ -5,11 +5,13 @@ let innerFrame = document.getElementById('inner-Frame');
 
 for(let i = 0; i<10; i++){
     let targetDiv = document.getElementById(`extend${i}`);
-    targetDiv.onmouseover = targetDiv.onmouseout = handleFile;
+    targetDiv.onmouseover = targetDiv.onmouseout=  handleFile;
+
 }
 
 function handleFile(event){
     let name = event.target.id;
+    console.log(name);
     let number = Number(name.split('d').pop());
     if(number <= 9){
         file = document.getElementById(`file${number}`);
@@ -69,15 +71,15 @@ function handleFile(event){
     readMeDiv = async ()=>{
         let readMe = document.createElement('div');
         readMe.classList = 'links';
-        readMe.id = 'readMe';
-        readMe.style.top = parseInt(linkDiv.style.top) + 55;
+        readMe.id = `readMe`;
+        readMe.style.top = parseInt(linkDiv.style.top)+55;
         readMe.style.transition = '.1s .1s';
         readMe.style.left = '285px'
         readMe.style.width = '340px';
         readMe.style.height = '115px';
         readMe.style.zIndex = number + 2;
         readMe.innerHTML = await getReadMe();
-        document.getElementById('folders').appendChild(readMe);
+        document.getElementById(`folders`).appendChild(readMe);
     }
     async function getReadMe(){
         const url = document.getElementById(`website${number}`) + '/README.md';
@@ -96,7 +98,6 @@ function handleFile(event){
     extendDivUp = ()=>{
         let extDiv = document.getElementById(`extend${number}`)
         extWidth = parseInt(extDiv.style.width);
-        console.log(extWidth);
         extWidth += 500;
         extDiv.style.width = extWidth + 'px';
         extTop = parseInt(extDiv.style.top);
@@ -131,12 +132,12 @@ function handleFile(event){
         iframeDiv.style.animation = 'none';
     }
     if(event.type == 'mouseover'){
-        if(number === 8){
-            readMeDiv();
+        if(number === 8 ){
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
             extendDivUp();
+            readMeDiv();
             fixIFrame();
             height += 25;
             linkDiv.style.borderBottom = '5px dotted white';
@@ -145,17 +146,17 @@ function handleFile(event){
             iframeDiv.style.background = 'linear-gradient(#14ffe9, #ffeb3b, #ff00e0)';
             iframeDiv.style.animation = 'rotate 1.5s linear infinite'
         }if(number === 9){
-            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
-            extendDivUp()
+            extendDivUp();
+            readMeDiv();
             fixIFrame();
             fixLastBorder();
             fix9();
         }if (number === 7){
-            readMeDiv();
             extendDivUp();
+            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
@@ -168,8 +169,8 @@ function handleFile(event){
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
         }if (number === 6){
-            readMeDiv();
             extendDivUp();
+            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
@@ -177,6 +178,7 @@ function handleFile(event){
             iframeDiv.style.background = `url('chalkboard_frame.jpg')`;
             iframeDiv.style.backgroundSize = '635px 769px';
             iframeDiv.style.backgroundPosition = '-33px -30px';
+            iframeDiv.style.boxShadow = 'inset 0 0 5px black';
             iframeDiv.style.animation = 'none';
             newFrame.style.border = 'none';
             height += 32;
@@ -185,8 +187,8 @@ function handleFile(event){
             linkDiv.style.borderRadius = '5px';
             linkDiv.style.borderBottom = '2px solid black';
         }if (number === 5){
-            readMeDiv();
             extendDivUp();
+            readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
             },100);
@@ -274,7 +276,6 @@ function handleFile(event){
 }
 moveFolders = ()=>{
     let top = 45;
-    setTimeout(()=>{
     for(let i=1;i<10;i++){
         let folder = document.getElementById(`file${i}`);
         let link = document.getElementById(`link${i}`);
@@ -285,8 +286,7 @@ moveFolders = ()=>{
         folder.style.top = folderTop;
         link.style.top = linkTop;
         extend.style.top = extendTop;
-    } 
-}, 100); 
+    }  
     setTimeout(()=>{
         for(let i=0;i<10;i++){
         let folder = document.getElementById(`file${i}`);
@@ -294,8 +294,15 @@ moveFolders = ()=>{
         folder.style.transition = 'top .1s .2s';
         link.style.transition = '.1s .2s';  
         }  
-    },1100)   
+    },100)   
 }
 setTimeout(()=>{
     window.onload = moveFolders();
 },200);
+
+document.getElementById('navBarDiv').addEventListener('mouseover', ()=>{
+    document.getElementById('navBarDiv').style.zIndex = 10;
+});
+document.getElementById('navBarDiv').addEventListener('mouseout', ()=>{
+    document.getElementById('navBarDiv').style.zIndex = 1;
+});
