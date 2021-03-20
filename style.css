@@ -3,12 +3,17 @@
     src: url('default page/1942.ttf');
 
 }
+@font-face {
+    font-family: 'typewriter';
+    src: url('typewriter.ttf');
+}
 .body-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows:  repeat(8,1fr);
     gap: 5px;
     height: 100vh;
+    background-color: black;
 
 }
 header {
@@ -26,8 +31,15 @@ header {
     position: relative;
     top: 70%; 
     font-size: 15px;
+    font-family: 'typewriter';
     text-shadow: none;
     background: transparent;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
 }
 .container-fluid {
     color: white;
@@ -86,7 +98,7 @@ iframe {
     text-align: center;
     font-size: 36px;
     color: white;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
 }
 #title {
     position: absolute;
