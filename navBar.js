@@ -14,9 +14,6 @@ addNavBar = ()=>{
           <li class="nav-item">
             <a class="nav-link" href='https://samswaringen.github.io/default%20page/aboutme.html'>About Me</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href='https://samswaringen.github.io/default%20page/links.html'>Links</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
