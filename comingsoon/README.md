@@ -1,1 +1,1 @@
-<p style = 'text-align: center; color: red; margin:auto;'>Coming Soon!</p>
+<p style = 'text-align: center; color: red; line-height: 50px'>Coming Soon!</p>
