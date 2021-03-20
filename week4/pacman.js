@@ -94,7 +94,8 @@ function ghostCheck(){
   let x2 = Math.abs(pacPosX - ghostPosX)**2;
   let y2 = Math.abs(pacPosY - ghostPosY)**2;
   let distanceBtwn = Math.sqrt(x2 + y2);
-  if (distanceBtwn < (imgWidth)){
+  let combinedWidth = parseInt(document.getElementById('PacMan').style.width) + 50;
+  if (distanceBtwn < (combinedWidth/2)){
     alert(`
      Game Over!
      You got ${pointCounter} Points!
