@@ -87,10 +87,10 @@ function makeGhost(ghostX, ghostY , ghostVelX, ghostVelY){
   document.getElementById('gameArea').appendChild(ghost);
 }
 function ghostCheck(){
-  let pacPosX = pos + (imgWidth/2);
-  let pacPosY = posY + (imgWidth/2);
-  let ghostPosX = ghostX + (imgWidth/2);
-  let ghostPosY = ghostY + (imgWidth/2);
+  let pacPosX = pos + (parseInt(imgWidth)/2);
+  let pacPosY = posY + (parseInt(imgWidth)/2);
+  let ghostPosX = ghostX + parseInt(imgWidth/2);
+  let ghostPosY = ghostY + parseInt(imgWidth/2);
   let x2 = Math.abs(pacPosX - ghostPosX)**2;
   let y2 = Math.abs(pacPosY - ghostPosY)**2;
   let distanceBtwn = Math.sqrt(x2 + y2);
