@@ -10,9 +10,10 @@
   body { margin: 0; padding: 0; }
   #map { position: absolute; top: 0; bottom: 0; left: 0; width: 100%; }
   #input { position: absolute; top: 0}
-  .button-overlay { position: absolute; left: 400;}; 
+  .button-overlay { position: absolute;}; 
   .input-overlay {position: absolute; padding: 10px;}
   .bus-marker { width: 50px; height: 50px; background: url('yellowbus.png'); background-size: contain;}
+  #getAccess {position:relative; left: 65px;}
 </style>
 </head>
 <body>
@@ -21,6 +22,7 @@
 <div id = 'input'>
 	Mapbox Access Token:<input id = 'token' type = 'text' class='input-overlay'>
 <button id = 'submit' class='button-overlay' onclick='inputToken()'>Submit</button>
+<a href ='https://docs.mapbox.com/help/getting-started/access-tokens/' id = 'getAccess' target="_blank">Get Access Token Here</a>
 </div>
 
 <script>
@@ -39,7 +41,6 @@ function inputToken(){
 	});
 	addStops();
 	run();
-
 }
 const busStops = [
       [-71.093729, 42.359244],
