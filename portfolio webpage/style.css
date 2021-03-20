@@ -51,7 +51,7 @@ body {
     background: rgb(0,0,0,.8)
 }
 #navBarDiv {
-    position: relative;
+    position: absolute;
     top: 6.7%; 
     font-family: '1942';
     font-size: 15px;
@@ -68,6 +68,7 @@ body {
 }
 #folders {
     position: absolute;
+    top: 55;
     left: 90;
     width: 900;
     height: 680;
