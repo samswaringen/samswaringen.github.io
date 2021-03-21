@@ -229,10 +229,10 @@ async function handleFile(event){
              let newLeft = parseInt(newFrame.style.left) - 5;
              newFrame.style.top = newTop;
              newFrame.style.left = newLeft;
-             console.log(newFrame.style.left)
         }if(number === 0){
             extendDivUp();
             fixIFrame();
+            iframeDiv.style.backgroundImage = 'url(wallpaper.jpg)'
         }
      fixZ();
      lastLink.style.top = expandTop + 'px';  
