@@ -11,7 +11,6 @@ for(let i = 0; i<10; i++){
 
 async function handleFile(event){
     let name = event.target.id;
-    console.log(name);
     let number = Number(name.split('d').pop());
     if(number <= 9){
         file = document.getElementById(`file${number}`);
@@ -43,30 +42,42 @@ async function handleFile(event){
         newFrame.style.width = '550px';
         innerFrame.style.top = '33px';
         innerFrame.style.left = '870px';
+        console.log(newFrame.style.left);
+        if (newFrame.style.left === '-5px'){
+            newTop = parseInt(newFrame.style.top);
+            newLeft = parseInt(newFrame.style.left);
+            newTop += 5;
+            newLeft += 5;
+            newFrame.style.top = newTop;
+            newFrame.style.left = newLeft ;
+        }
     }
     fixZ = ()=>{
         let fileZ = Number(file.style.zIndex);
         let fixLink = document.getElementById(`link${number-1}`);
-        if (fileZ === number + 2){
-          if(number != 0){  
-            fixLink.style.zIndex = number +2;
-          }
-          if( number <9){
-          fixFile = document.getElementById(`file${number+1}`);
-          fixFile.style.zIndex = number + 1; 
-          } 
-          file.style.zIndex = number;
-        }else{
-          fileZ = number + 2;
-          file.style.zIndex = fileZ;
-            if(number != 0){
-                fixLink.style.zIndex = number;
-            }
-          if(number<9){
-          fixFile = document.getElementById(`file${number+1}`);
-          fixFile.style.zIndex = number + 2;
-          }
-        }  
+            if (fileZ === number + 2){
+                if (number != 0){                
+                    fixLink.style.zIndex = number + 2;
+                }
+                setTimeout(()=>{
+                    document.getElementById('navBarDiv').style.zIndex = 1;
+                }, 200);
+                file.style.zIndex = number;
+                if( number <9){
+                    fixFile = document.getElementById(`file${number+1}`);
+                    fixFile.style.zIndex = number + 1;  
+                   }
+            }else {
+                fileZ = number + 2;
+                file.style.zIndex = fileZ;
+                document.getElementById('navBarDiv').style.zIndex = 0;
+                if(number != 0){
+                    fixLink.style.zIndex = number;
+                }if(number<9){
+                    fixFile = document.getElementById(`file${number+1}`);
+                    fixFile.style.zIndex = number + 2;
+                }
+            }  
     }
     readMeDiv = async ()=>{
         let readMe = document.createElement('div');
@@ -178,7 +189,6 @@ async function handleFile(event){
             iframeDiv.style.background = `url('chalkboard_frame.jpg')`;
             iframeDiv.style.backgroundSize = '635px 769px';
             iframeDiv.style.backgroundPosition = '-33px -30px';
-            iframeDiv.style.boxShadow = 'inset 0 0 5px black';
             iframeDiv.style.animation = 'none';
             newFrame.style.border = 'none';
             height += 32;
@@ -199,7 +209,7 @@ async function handleFile(event){
              linkDiv.style.borderBottom = '2px solid black';
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
-        }if(number<5){
+        }if(number < 5 && number > 0){
             readMeDiv();
             setTimeout(()=>{
                 readMe.style.top = parseInt(readMe.style.top)-82;
@@ -213,6 +223,16 @@ async function handleFile(event){
              linkDiv.style.borderBottom = '2px solid black';
              iframeDiv.style.background = 'linear-gradient(red, black, red)';
              iframeDiv.style.animation = 'rotateRed 1s linear infinite';
+             newFrame.style.width = '560px';
+             newFrame.style.height = '693px';
+             let newTop = parseInt(newFrame.style.top) - 5;
+             let newLeft = parseInt(newFrame.style.left) - 5;
+             newFrame.style.top = newTop;
+             newFrame.style.left = newLeft;
+             console.log(newFrame.style.left)
+        }if(number === 0){
+            extendDivUp();
+            fixIFrame();
         }
      fixZ();
      lastLink.style.top = expandTop + 'px';  
@@ -253,17 +273,23 @@ async function handleFile(event){
             fixLastBorder();
         }if (number === 5){
             removeReadMe();
-         height -= 32;
-         extendDivDown();
-         fixNamedBorder();
-         fixLastBorder();
-        }if (number < 5) {
-         removeReadMe();
-         height -= 32;
-         extendDivDown();
-         linkDiv.style.fontSize = '18px';
-         fixNamedBorder();
-         fixLastBorder();
+            height -= 32;
+            extendDivDown();
+            fixNamedBorder();
+            fixLastBorder();
+        }if (number < 5 && number > 0) {
+             removeReadMe();
+            height -= 32;
+            extendDivDown();
+            linkDiv.style.fontSize = '18px';
+            fixNamedBorder();
+            fixLastBorder();
+        }if (number === 0) {
+            file.style.zIndex = 2;
+            extendDivDown();
+            linkDiv.style.fontSize = '18px';
+            fixNamedBorder();
+            fixLastBorder();
         }
       fixZ();
       lastLink.style.top = expandTop + 'px'; 

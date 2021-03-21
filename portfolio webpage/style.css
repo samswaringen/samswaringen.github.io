@@ -291,7 +291,7 @@ body {
     animation: none;
 }
 #newFrame {
-    position: relative;
+    position: absolute;
     background: white;
 }
 iframe {
