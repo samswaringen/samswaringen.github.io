@@ -34,7 +34,7 @@ async function handleFile(event){
         
     }
     fixLastBorder = () => {
-        lastLink.style.borderBottom = '2px solid black';
+        lastLink.style.borderBottom = '1px solid black';
         lastLink.style.borderRadius = '5px';
     }
     fixIFrame = () => {
@@ -176,7 +176,7 @@ async function handleFile(event){
              linkDiv.style.fontSize = '22px'
              linkDiv.style.lineHeight = '58px';
              linkDiv.style.borderRadius = '5px';
-             linkDiv.style.borderBottom = '2px solid black';
+             linkDiv.style.borderBottom = '1px solid black';
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
         }if (number === 6){
@@ -195,7 +195,7 @@ async function handleFile(event){
             linkDiv.style.fontSize = '18px'
             linkDiv.style.lineHeight = '58px';
             linkDiv.style.borderRadius = '5px';
-            linkDiv.style.borderBottom = '2px solid black';
+            linkDiv.style.borderBottom = '1px solid black';
         }if (number === 5){
             readMeDiv();
             setTimeout(()=>{
@@ -206,7 +206,7 @@ async function handleFile(event){
              height += 32;
              linkDiv.style.lineHeight = '58px';
              linkDiv.style.borderRadius = '5px';
-             linkDiv.style.borderBottom = '2px solid black';
+             linkDiv.style.borderBottom = '1px solid black';
              iframeDiv.style.background = ' center / contain repeat url(wallpaper.jpg)';
              iframeDiv.style.animation = 'none';
         }if(number < 5 && number > 0){
@@ -220,7 +220,7 @@ async function handleFile(event){
              linkDiv.style.fontSize = '22px'
              linkDiv.style.lineHeight = '58px';
              linkDiv.style.borderRadius = '5px';
-             linkDiv.style.borderBottom = '2px solid black';
+             linkDiv.style.borderBottom = '1px solid black';
              iframeDiv.style.background = 'linear-gradient(red, black, red)';
              iframeDiv.style.animation = 'rotateRed 1s linear infinite';
              newFrame.style.width = '560px';
@@ -232,6 +232,11 @@ async function handleFile(event){
         }if(number === 0){
             extendDivUp();
             fixIFrame();
+            height += 32;
+            linkDiv.style.fontSize = '22px'
+            linkDiv.style.lineHeight = '58px';
+            linkDiv.style.borderRadius = '5px';
+            linkDiv.style.borderBottom = '1px solid black';
             iframeDiv.style.backgroundImage = 'url(wallpaper.jpg)'
         }
      fixZ();
@@ -287,6 +292,7 @@ async function handleFile(event){
         }if (number === 0) {
             file.style.zIndex = 2;
             extendDivDown();
+            height -= 32;
             linkDiv.style.fontSize = '18px';
             fixNamedBorder();
             fixLastBorder();
