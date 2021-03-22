@@ -21,4 +21,22 @@ h2 {
 p {
     text-align: center;
     font-family: 'Bohemian';
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#navBarDiv {
+    text-shadow: 1.5px 1.5px 1px black;
+    font-family: 'Bohemian';
+}
+.dropdown-item {
+    text-shadow: none;
+}
+.navbar-brand {
+    margin-left: 33.3%;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
 }
