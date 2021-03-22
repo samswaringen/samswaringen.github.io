@@ -1,7 +1,7 @@
 addNavBar = ()=>{
     let navDiv = document.getElementById('navBarDiv');
     navDiv.innerHTML = `<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+    <div class="container-fluid" id = 'navBar'>
       <a class="navbar-brand" href="https://samswaringen.github.io">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" onfocus = 'fixZInd()' aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@ addNavBar = ()=>{
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
-            <ul class="dropdown-menu" id = 'dropdown' aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu" id = 'dropdownPro' aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href='https://samswaringen.github.io/week3'>Random Painter</a></li>
               <li><a class="dropdown-item" href='https://samswaringen.github.io/week4'>PacMan Eraser</a></li>
               <li><a class="dropdown-item" href="https://samswaringen.github.io/bustracker">Bus Tracker</a></li>
@@ -26,7 +26,7 @@ addNavBar = ()=>{
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             GitHub Links
           </a>
-            <ul class="dropdown-menu" id = 'dropdown' aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu" id = 'dropdownGit' aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/portfolio%20webpage'>Project Portfolio GitHub</a></li>
               <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/week3'>Random Painter Github</a></li>
               <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/week4'>PacMan Eraser Github</a></li>

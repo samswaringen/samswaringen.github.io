@@ -105,6 +105,9 @@ article {
                  1px 1px 4px black, -1px -1px 4px black, -1px 1px 4px black, 1px -1px 4px black;
 
 }
+#aboutMeLink {
+    text-decoration: none;
+}
 footer {
     padding-top: 50px;
     grid-column: 1 / 5;
