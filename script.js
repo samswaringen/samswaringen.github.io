@@ -1,8 +1,3 @@
-//let portfolioImg = document.getElementById('aside-left');
-//let cabinetSrc = document.getElementById('gifDiv');
-//portfolioImg.addEventListener('mouseenter', ()=>{
-//    cabinetSrc.style.backgroundImage = 'url(cabinet.gif)';
-//})
-//portfolioImg.addEventListener('mouseout', ()=>{
-//    cabinetSrc.style.backgroundImage = 'url(cabinet_closed.jpg)';
-//})
+setTimeout(()=>{
+    document.getElementById('iframe').src = 'https://www.youtube.com/embed/?listType=playlist&list=PLs1pmxBvOzVpzouqMoz3oZiTqH6ADJ1b5'
+},1500);

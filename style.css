@@ -42,11 +42,18 @@ header {
 }
 #navBarDiv {
     position: relative;
-    top: 50%; 
+    top: 55%; 
     font-size: 15px;
     font-family: 'typewriter';
     text-shadow: none;
     background: transparent;
+}
+.nav-item {
+    margin-left: 245px;
+}
+.navbar-brand {
+    margin-left: 150px;
+    margin-right: 225px;
 }
 .dropdown:hover > .dropdown-menu {
     display: block;
@@ -83,7 +90,7 @@ article {
 .aboutme {
     position: relative;
     text-align: center;
-    top: 15%;
+    top: 55%;
     left: 8%;
     font-family: 'woodburn';
     text-decoration: none;
@@ -112,14 +119,14 @@ footer {
 iframe {
     position:relative;
     top: 26.1%;
-    left: 10%;
+    left: 10.2%;
 
 }
 #board {
     position:relative;
     box-shadow: 0 0 6px black, 0 0 8px rgb(104, 103, 103), -2px -2px 4px black;
     line-height: 137px;
-    top: 15%;
+    top: 55%;
     left: 8%;
     border-radius: 3px;
 }
