@@ -233,7 +233,6 @@ async function handleFile(event){
             extendDivUp();
             fixIFrame();
             height += 32;
-            linkDiv.style.fontSize = '22px'
             linkDiv.style.lineHeight = '58px';
             linkDiv.style.borderRadius = '5px';
             linkDiv.style.borderBottom = '1px solid black';
@@ -293,7 +292,6 @@ async function handleFile(event){
             file.style.zIndex = 2;
             extendDivDown();
             height -= 32;
-            linkDiv.style.fontSize = '18px';
             fixNamedBorder();
             fixLastBorder();
         }
