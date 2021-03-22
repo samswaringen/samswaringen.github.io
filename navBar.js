@@ -12,7 +12,7 @@ addNavBar = ()=>{
             <a class="nav-link active" aria-current="page" href="https://samswaringen.github.io">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href='https://samswaringen.github.io/default%20page/aboutme.html'>About Me</a>
+            <a class="nav-link" href='https://samswaringen.github.io/portfolio%20webpage'>Project Landing Page</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,6 +30,7 @@ addNavBar = ()=>{
             GitHub Links
           </a>
             <ul class="dropdown-menu" id = 'dropdown' aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/portfolio%20webpage'>Project Portfolio GitHub</a></li>
               <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/week3'>Random Painter Github</a></li>
               <li><a class="dropdown-item" href='https://github.com/samswaringen/samswaringen.github.io/tree/main/week4'>PacMan Eraser Github</a></li>
               <li><a class="dropdown-item" href="https://github.com/samswaringen/samswaringen.github.io/tree/main/bustracker">Bus Tracker GitHub</a></li>

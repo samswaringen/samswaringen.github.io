@@ -7,13 +7,25 @@
     font-family: 'typewriter';
     src: url('typewriter.ttf');
 }
+@font-face {
+    font-family: 'dalek';
+    src: url('Dalek.ttf');
+}
+@font-face {
+    font-family: 'burned';
+    src: url('burned.ttf');
+}
+@font-face {
+    font-family: 'woodburn';
+    src: url('Woodburn.ttf');
+}
 .body-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows:  repeat(8,1fr);
+    grid-template-rows: 30px repeat(9,1fr);
     gap: 10px;
     height: 100vh;
-    background-image: url('marble.jpg');
+    background-image: url('wood.jpg');
     background-size: contain;
 
 }
@@ -26,11 +38,11 @@ header {
     font: 50px bold black;
     text-shadow: 2px 2px 1px rgb(56, 56, 56);
     font-family: '1942';
-    padding-top: 30px;
+    padding-top: 20px;
 }
 #navBarDiv {
     position: relative;
-    top: 70%; 
+    top: 50%; 
     font-size: 15px;
     font-family: 'typewriter';
     text-shadow: none;
@@ -46,7 +58,7 @@ header {
     color: white;
 }
 .div {
-    border: 1px solid black;
+    border: none;
  
 }
 #aside-left {
@@ -56,13 +68,13 @@ header {
 }
 .project {
     position: relative;
+    text-align: center;
     height: 100%;
     margin-left: 5px;
 }
 article {
     grid-column: 2 / 4;
     grid-row: 3 / 8;
-    background: gray;
 }
 .aside-right {
     grid-column: 4 / 5;
@@ -70,19 +82,26 @@ article {
 }
 .aboutme {
     position: relative;
-    height: 75%;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-.links {
-    position: relative;
-    height: 24%;
-    margin-right: 5px;
+    text-align: center;
+    top: 15%;
+    left: 8%;
+    font-family: 'woodburn';
+    text-decoration: none;
+    font-size: 46px;
+    color: black;
+    line-height: 137px;
+    box-shadow: 0 0 6px black, 0 0 8px rgb(104, 103, 103), 2px -2px 4px black;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black,
+                 1px 1px 2px rgb(71, 41, 1), -1px -1px 2px rgb(71, 41, 1), -1px 1px 2px rgb(71, 41, 1), 1px -1px 2px rgb(71, 41, 1),
+                 1px 1px 3px rgb(104, 103, 103), -1px -1px 3px rgb(104, 103, 103), -1px 1px 3px rgb(104, 103, 103), 1px -1px 3px rgb(104, 103, 103),
+                 1px 1px 4px black, -1px -1px 4px black, -1px 1px 4px black, 1px -1px 4px black;
+
 }
 footer {
     padding-top: 50px;
     grid-column: 1 / 5;
-    grid-row: 8 / 9;
+    grid-row: 10 / 11;
     text-align: right;
     background-image: url('falling.gif');
     background-size: cover;
@@ -91,17 +110,30 @@ footer {
     font-family: '1942';
 }
 iframe {
-    width: 100%;
-    height: 100%;
+    position:relative;
+    top: 26.1%;
+    left: 10%;
 
 }
+#board {
+    position:relative;
+    box-shadow: 0 0 6px black, 0 0 8px rgb(104, 103, 103), -2px -2px 4px black;
+    line-height: 137px;
+    top: 15%;
+    left: 8%;
+    border-radius: 3px;
+}
 #portfolioImg {
-    font-family: '1942';
+    font-family: 'woodburn';
     text-decoration: none;
     text-align: center;
-    font-size: 36px;
-    color: white;
-    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    font-size: 46px;
+    color: black;
+    z-index: 1;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black,
+                 1px 1px 2px rgb(71, 41, 1), -1px -1px 2px rgb(71, 41, 1), -1px 1px 2px rgb(71, 41, 1), 1px -1px 2px rgb(71, 41, 1),
+                 1px 1px 3px rgb(104, 103, 103), -1px -1px 3px rgb(104, 103, 103), -1px 1px 3px rgb(104, 103, 103), 1px -1px 3px rgb(104, 103, 103),
+                 1px 1px 4px black, -1px -1px 4px black, -1px 1px 4px black, 1px -1px 4px black;
 }
 #title {
     position: absolute;
