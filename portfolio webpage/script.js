@@ -1,4 +1,5 @@
 
+document.getElementById('nav-container').classList.add('navbar-dark');
 let iframeDiv = document.getElementById('iframeDiv');
 let newFrame = document.getElementById('newFrame');
 let innerFrame = document.getElementById('inner-Frame');
