@@ -46,9 +46,9 @@ header {
     top: 85%; 
     font-size: 30px;
     font-family: 'woodburn';
-    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black,
-                 1px 1px 2px rgb(71, 41, 1), -1px -1px 2px rgb(71, 41, 1), -1px 1px 2px rgb(71, 41, 1), 1px -1px 2px rgb(71, 41, 1),
-                 1px 1px 3px rgb(104, 103, 103), -1px -1px 3px rgb(104, 103, 103), -1px 1px 3px rgb(104, 103, 103), 1px -1px 3px rgb(104, 103, 103),
+    text-shadow: 1px 1px 1px rgb(0, 0, 0), -1px -1px 1px rgb(0, 0, 0), -1px 1px 1px rgb(0, 0, 0), 1px -1px 1px rgb(0, 0, 0),
+                 1px 1px 2px rgb(104, 103, 103), -1px -1px 2px rgb(104, 103, 103), -1px 1px 2px rgb(104, 103, 103), 1px -1px 2px rgb(104, 103, 103),
+                 1px 1px 3px rgb(71, 41, 1), -1px -1px 3px rgb(71, 41, 1), -1px 1px 3px rgb(71, 41, 1), 1px -1px 3px rgb(71, 41, 1),
                  1px 1px 4px black, -1px -1px 4px black, -1px 1px 4px black, 1px -1px 4px black;
     background: transparent;
     text-decoration: none;
@@ -61,8 +61,21 @@ header {
 #dropdownGit {
     text-shadow: none;
     font-size: 25px;
-    background:rgb(0,0,0,.8);
+    background:rgb(0,0,0,.7);
     text-shadow: 1px 1px 1px white, -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white;
+}
+#portfolio-git:hover,
+#painter:hover,
+#painter-git:hover,
+#eraser:hover,
+#eraser-git:hover,
+#challenges:hover,
+#challenges-git:hover,
+#tracker:hover,
+#tracker-git:hover,
+#eyes:hover,
+#eyes-git:hover {
+    background-color: black;
 }
 .linkDiv {
     position:absolute;
@@ -108,7 +121,12 @@ header {
 }
 .div {
     border: none;
- 
+}
+#nail {
+    position:absolute;
+    top:18.5%;
+    left: 50.1%;
+    z-index: 1;
 }
 #aside-left {
     grid-column: 1 / 2;
