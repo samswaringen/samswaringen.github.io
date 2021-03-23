@@ -24,9 +24,28 @@ p {
     margin-left: 25%;
     margin-right: 25%;
 }
-#navBarDiv {
-    text-shadow: 1.5px 1.5px 1px black;
+.website {
+    text-align: center;
     font-family: 'Bohemian';
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+#navBarDiv {
+    text-shadow: .5px .5px 1px black;
+    font-family: 'Bohemian';
+}
+#portfolio-git:hover,
+#painter:hover,
+#painter-git:hover,
+#eraser:hover,
+#eraser-git:hover,
+#challenges:hover,
+#challenges-git:hover,
+#tracker:hover,
+#tracker-git:hover,
+#eyes:hover,
+#eyes-git:hover{
+    font-weight: bold;
 }
 .dropdown-item {
     text-shadow: none;
