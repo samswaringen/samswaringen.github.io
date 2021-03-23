@@ -13,16 +13,20 @@ html {
 h1 {
     font-family: '1942';
     text-align: center;
+    margin-right: 45%;
+    margin-left: 5%
 }
 h2 {
     text-align: center;
     font-family: '1942';
+    margin-right: 45%;
+    margin-left: 5%
 }
 p {
     text-align: center;
     font-family: 'Bohemian';
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-right: 45%;
+    margin-left: 5%
 }
 .website {
     text-align: center;
@@ -33,6 +37,7 @@ p {
 #navBarDiv {
     text-shadow: .5px .5px 1px black;
     font-family: 'Bohemian';
+    margin-right: 45%;
 }
 #portfolio-git:hover,
 #painter:hover,
@@ -51,11 +56,21 @@ p {
     text-shadow: none;
 }
 .navbar-brand {
-    margin-left: 33.3%;
+    margin-left: 22.5%;
 }
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
 .dropdown > .dropdown-toggle:active {
     pointer-events: none;
+}
+#frameDiv {
+    position:absolute;
+    left: 62%;
+    top: 5%;  
+    z-index: 10;
+}
+#me {
+    position: absolute;
+    left: 67%;
 }
