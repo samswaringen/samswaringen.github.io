@@ -13,3 +13,4 @@ document.getElementById('rightDiv').addEventListener('mouseover', ()=>{
 document.getElementById('rightDiv').addEventListener('mouseleave', ()=>{
     document.getElementById('aboutme').style.transform = 'rotate(0deg)';
 })
+document.getElementById('nav-container').classList.add('navbar-light');

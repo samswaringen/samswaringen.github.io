@@ -1,18 +1,21 @@
 addNavBar = ()=>{
     let navDiv = document.getElementById('navBarDiv');
-    navDiv.innerHTML = `<nav class="navbar navbar-expand-lg navbar-dark">
+    navDiv.innerHTML = `<nav id = 'nav-container' class="navbar navbar-expand-lg">
     <div class="container-fluid" id = 'navBar'>
-      <a class="navbar-brand" href="https://samswaringen.github.io">Home</a>
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" onfocus = 'fixZInd()' aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href='https://samswaringen.github.io/'>Home</a>
+         </li>
           <li class="nav-item">
             <a class="nav-link" href='https://samswaringen.github.io/portfolio%20webpage'>Project Landing Page</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
             <ul class="dropdown-menu" id = 'dropdownPro' aria-labelledby="navbarDropdownMenuLink">
@@ -23,7 +26,7 @@ addNavBar = ()=>{
               <li><a class="dropdown-item" href="https://samswaringen.github.io/eyes">EYES</a></li>
             </ul>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             GitHub Links
           </a>
             <ul class="dropdown-menu" id = 'dropdownGit' aria-labelledby="navbarDropdownMenuLink">
