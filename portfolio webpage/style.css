@@ -63,6 +63,23 @@ body {
     width: 50%;
     z-index: 1;
 }
+#dropdownPro,
+#dropdownGit {
+    background-image: url('paper.jpg');
+}
+#portfolio-git:hover,
+#painter:hover,
+#painter-git:hover,
+#eraser:hover,
+#eraser-git:hover,
+#challenges:hover,
+#challenges-git:hover,
+#tracker:hover,
+#tracker-git:hover,
+#eyes:hover,
+#eyes-git:hover{
+    font-weight: bold;
+}
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
