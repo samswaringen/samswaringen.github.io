@@ -94,7 +94,7 @@ async function handleFile(event){
         document.getElementById(`folders`).appendChild(readMe);
     }
     async function getReadMe(){
-        const url = document.getElementById(`website${number}`) + '/README.md';
+        const url = document.getElementById(`website${number}`) + '/DESCRIPTION.md';
         const response = await fetch(url);
         const text = await response.text();
         return text;
