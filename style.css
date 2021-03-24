@@ -57,6 +57,9 @@ header {
 .nav-item {
     margin-left: 180px;
 }
+.nav-link {
+    width: 150%;
+}
 #dropdownPro,
 #dropdownGit {
     text-shadow: none;
@@ -122,12 +125,6 @@ header {
 .div {
     border: none;
 }
-#nail {
-    position:absolute;
-    top:18.5%;
-    left: 50.1%;
-    z-index: 1;
-}
 #aside-left {
     grid-column: 1 / 2;
     grid-row: 3 / 8;
@@ -148,10 +145,10 @@ article {
     grid-row: 3 / 8;
 }
 .aboutme {
-    position: relative;
+    position: absolute;
     text-align: center;
-    top: 65%;
-    left: 8%;
+    top: 43.5%;
+    left: 77%;
     font-family: 'woodburn';
     text-decoration: none;
     font-size: 46px;
@@ -191,11 +188,11 @@ iframe {
 
 }
 #board {
-    position:relative;
+    position:absolute;
     box-shadow: 0 0 6px black, 0 0 8px rgb(104, 103, 103), -2px -2px 4px black;
     line-height: 137px;
-    top: 65%;
-    left: 8%;
+    top: 43.5%;
+    left: 2%;
     transition: .5s .2s;
     border-radius: 3px;
     transform-origin: 0% 0%;
