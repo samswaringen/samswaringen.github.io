@@ -92,8 +92,8 @@ header {
     position:absolute;
     top:45%;
     left:2%;
-    width: 320px;
-    height: 130px;
+    width: 20.5%;
+    height: 17.5%;
     background-image: url('fire.gif');
     border-radius: 2px;
     box-shadow: inset 0 0 4px black,1px 0 4px black ;
@@ -103,8 +103,8 @@ header {
     position:absolute;
     top:45%;
     left: 77.5%;
-    width: 320px;
-    height: 130px;
+    width: 20.5%;
+    height: 17.5%;
     background-image: url('eerie.gif');
     border-radius: 3px;
     box-shadow: inset 0px 30px 60px -12px rgb(76, 76, 77, .35) , inset  0px 18px 36px -18px rgba(0, 0, 0), 0 0 3px black;
@@ -185,9 +185,9 @@ footer {
     font-family: '1942';
 }
 iframe {
-    position:relative;
-    top: 36.1%;
-    left: 10.1%;
+    position:absolute;
+    top: 32%;
+    left: 30%;
 
 }
 #board {
