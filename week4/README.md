@@ -18,7 +18,7 @@ Go To samswaringen.github.io/week4
 MIT license. My code is free to use
 
 ## Credit
-w3schools.com
-stackoverflow.com
-developer.mozilla.com
-MIT xPro program for supplying me with starter files
+* w3schools.com
+* stackoverflow.com
+* developer.mozilla.com
+* MIT xPro program for supplying me with starter files
