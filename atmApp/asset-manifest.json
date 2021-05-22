@@ -1,22 +1,17 @@
 {
-  "files": {
-    "main.css": "/atmApp/static/css/main.b8660f50.chunk.css",
-    "main.js": "/atmApp/static/js/main.7c355a58.chunk.js",
-    "main.js.map": "/atmApp/static/js/main.7c355a58.chunk.js.map",
-    "runtime-main.js": "/atmApp/static/js/runtime-main.edbf51fa.js",
-    "runtime-main.js.map": "/atmApp/static/js/runtime-main.edbf51fa.js.map",
-    "static/js/2.f0e9a3b0.chunk.js": "/atmApp/static/js/2.f0e9a3b0.chunk.js",
-    "static/js/2.f0e9a3b0.chunk.js.map": "/atmApp/static/js/2.f0e9a3b0.chunk.js.map",
-    "static/js/3.cdb6dcac.chunk.js": "/atmApp/static/js/3.cdb6dcac.chunk.js",
-    "static/js/3.cdb6dcac.chunk.js.map": "/atmApp/static/js/3.cdb6dcac.chunk.js.map",
-    "index.html": "/atmApp/index.html",
-    "static/css/main.b8660f50.chunk.css.map": "/atmApp/static/css/main.b8660f50.chunk.css.map",
-    "static/js/2.f0e9a3b0.chunk.js.LICENSE.txt": "/atmApp/static/js/2.f0e9a3b0.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.edbf51fa.js",
-    "static/js/2.f0e9a3b0.chunk.js",
-    "static/css/main.b8660f50.chunk.css",
-    "static/js/main.7c355a58.chunk.js"
-  ]
+  "main.css": "/atmApp/static/css/main.6c1f4a60.chunk.css",
+  "main.js": "/atmApp/static/js/main.f599b402.chunk.js",
+  "main.js.map": "/atmApp/static/js/main.f599b402.chunk.js.map",
+  "runtime~main.js": "/atmApp/static/js/runtime~main.1e58b22d.js",
+  "runtime~main.js.map": "/atmApp/static/js/runtime~main.1e58b22d.js.map",
+  "static/js/2.2359fdfb.chunk.js": "/atmApp/static/js/2.2359fdfb.chunk.js",
+  "static/js/2.2359fdfb.chunk.js.map": "/atmApp/static/js/2.2359fdfb.chunk.js.map",
+  "static/js/3.58f6af48.chunk.js": "/atmApp/static/js/3.58f6af48.chunk.js",
+  "static/js/3.58f6af48.chunk.js.map": "/atmApp/static/js/3.58f6af48.chunk.js.map",
+  "index.html": "/atmApp/index.html",
+  "precache-manifest.b0cd70791739859f2a2f0906667c2eb5.js": "/atmApp/precache-manifest.b0cd70791739859f2a2f0906667c2eb5.js",
+  "service-worker.js": "/atmApp/service-worker.js",
+  "static/css/main.6c1f4a60.chunk.css.map": "/atmApp/static/css/main.6c1f4a60.chunk.css.map",
+  "static/media/App.css": "/atmApp/static/media/marble.4c13a36d.jpg",
+  "static/media/temple.png": "/atmApp/static/media/temple.7ccd322d.png"
 }
