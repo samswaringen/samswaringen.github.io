@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/atmApp/precache-manifest.b0cd70791739859f2a2f0906667c2eb5.js"
+  "/atmApp/precache-manifest.ff17f59a6cd24cf2a59ad9ed1b9c706a.js"
 );
 
 workbox.clientsClaim();
