@@ -11,8 +11,8 @@ fork repo and run on local server
 ## Features
 
 * State of the account balance and account history is managed and saved to pin entered
-  *Pin codes are saved as properties of state objects accountBalance and accountHistory 
-  *Account History is saved as an array under the correct pin property so ending the session and reopening with same pin loads correct account information acting like a bank.
+  * Pin codes are saved as properties of state objects accountBalance and accountHistory 
+  * Account History is saved as an array under the correct pin property so ending the session and reopening with same pin loads correct account information acting like a bank.
 * Created single page application and uses React to mount/unmount components on demand 
 
 ## Future Updates
