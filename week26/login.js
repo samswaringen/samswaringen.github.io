@@ -31,6 +31,7 @@
     provider.addScope('profile');
     provider.addScope('email');
     firebase.auth().signInWithPopup(provider).then(function(result) {
+      console.log("result:",result)
       email.style.display = "none"
       password.style.display = "none"
       login.style.display = "none"
