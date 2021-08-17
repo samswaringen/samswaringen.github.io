@@ -31,10 +31,12 @@
     provider.addScope('profile');
     provider.addScope('email');
     firebase.auth().signInWithPopup(provider).then(function(result) {
-     // This gives you a Google Access Token.
-     var token = result.credential.accessToken;
-     // The signed-in user info.
-     var user = result.user;
+      email.style.display = "none"
+      password.style.display = "none"
+      login.style.display = "none"
+      googlelogin.style.display = "none"
+      logout.style.display = "inline"
+      loggedInStatus.innerHTML = `You are logged in using the following email: ${result.user.email}`
     });
   });
   
