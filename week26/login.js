@@ -35,6 +35,7 @@
       email.style.display = "none"
       password.style.display = "none"
       login.style.display = "none"
+      signup.style.display = "none"
       googlelogin.style.display = "none"
       logout.style.display = "inline"
       loggedInStatus.innerHTML = `You are logged in using the following email: ${result.user.email}`
